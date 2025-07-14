@@ -1,0 +1,62 @@
+.sales-report {
+    max-width: 600px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.sales-report h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-box{
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.sales-report-table {
+    width: 100%;
+    color: #2c3e50;
+    max-width: 800px;
+    border: none;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.sales-report-table th, .sales-report-table td {
+    /* color: #2c3e50; */
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.div{
+    color: #2c3e50;
+}
+
+.sales-report-table th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-button {
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}

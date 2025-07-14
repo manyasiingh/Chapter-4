@@ -1,0 +1,32 @@
+.apply-coupon-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.coupon-input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    padding: 10px 20px;
+    background-color: #0c6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.totals p {
+    margin: 5px 0;
+}

@@ -1,0 +1,56 @@
+.book-detail-container {
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  color: #2c3e50;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.book-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.book-cover {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.details {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 8px 0;
+  
+}
+
+strong {
+  color: #2c3e50;
+}
+
+.book-detail-container{
+  cursor: pointer;
+}
+
+.addtocart{
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #4a90e2;
+  color: white;
+}
+
+.addtocart:hover {
+  background-color: #3a7bc8;
+}

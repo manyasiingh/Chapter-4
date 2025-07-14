@@ -1,0 +1,2597 @@
+{
+  "Version": 1,
+  "Hash": "BBwBp2/FdKo+HTIJ7WB6zErV9534x5HuDbEPW6zzja4=",
+  "Source": "backend",
+  "BasePath": "_content/backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "backend\\wwwroot",
+      "Source": "backend",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\072061b0-b2be-4401-9375-acd87e92361d.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/072061b0-b2be-4401-9375-acd87e92361d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\072061b0-b2be-4401-9375-acd87e92361d.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\1984.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/1984#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1984.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\23e57b34-6bbd-43e6-9828-fcc39cc2d20e.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/23e57b34-6bbd-43e6-9828-fcc39cc2d20e#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\23e57b34-6bbd-43e6-9828-fcc39cc2d20e.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/4d2a25d0-1bc8-426b-bb95-40ff3b9c8321#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\5068d930-3b22-47cd-93b4-cbdbaaf37db8.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/5068d930-3b22-47cd-93b4-cbdbaaf37db8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5068d930-3b22-47cd-93b4-cbdbaaf37db8.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\85d1f307-b581-417c-b0ad-78f2a10d6969.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/85d1f307-b581-417c-b0ad-78f2a10d6969#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\85d1f307-b581-417c-b0ad-78f2a10d6969.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\88e5cce7-1854-4b4e-b847-b35037c7db36.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/88e5cce7-1854-4b4e-b847-b35037c7db36#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\88e5cce7-1854-4b4e-b847-b35037c7db36.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/cb35e39b-a2dc-44c7-8dbd-047349d6b6eb#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\cc24dc5e-7d8e-4500-87ae-fd335161679b.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/cc24dc5e-7d8e-4500-87ae-fd335161679b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cc24dc5e-7d8e-4500-87ae-fd335161679b.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\db3ef21b-8f69-4e94-a859-c27cfe36e8b0.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/db3ef21b-8f69-4e94-a859-c27cfe36e8b0#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\db3ef21b-8f69-4e94-a859-c27cfe36e8b0.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/e2b8ddd1-3d99-4f85-83b3-18fc00726e9d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\godan.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/godan#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fnqk41brk6",
+      "Integrity": "FaRd4a8XIrCqyvmnZm12lFbb9zzYcBsPt6f78KpdGw4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\godan.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_1_638854385661085776.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_1_638854385661085776#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_1_638854385661085776.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_1_638856681030776996.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_1_638856681030776996#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_1_638856681030776996.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852379821763034.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_2_638852379821763034#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_2_638852379821763034.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852381224875217.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_2_638852381224875217#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_2_638852381224875217.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852382015735276.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_2_638852382015735276#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hd0rj5glr7",
+      "Integrity": "paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_2_638852382015735276.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852383887579470.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_2_638852383887579470#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_2_638852383887579470.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_25_638868876809635530.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_25_638868876809635530#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aym6qyaa7t",
+      "Integrity": "svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_25_638868876809635530.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_8_638856693916665849.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/profile_8_638856693916665849#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile_8_638856693916665849.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\thegreatgatsby.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/thegreatgatsby#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sj85rkkjwv",
+      "Integrity": "iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\thegreatgatsby.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\tokillamockingbird.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "images/tokillamockingbird#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aym6qyaa7t",
+      "Integrity": "svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\tokillamockingbird.png"
+    },
+    {
+      "Identity": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\review-images\\6ab8d510-75d9-459a-8c75-3b6ef276796e.png",
+      "SourceId": "backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\",
+      "BasePath": "_content/backend",
+      "RelativePath": "review-images/6ab8d510-75d9-459a-8c75-3b6ef276796e#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aym6qyaa7t",
+      "Integrity": "svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\review-images\\6ab8d510-75d9-459a-8c75-3b6ef276796e.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/072061b0-b2be-4401-9375-acd87e92361d.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\072061b0-b2be-4401-9375-acd87e92361d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 11:12:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/072061b0-b2be-4401-9375-acd87e92361d.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/072061b0-b2be-4401-9375-acd87e92361d.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\072061b0-b2be-4401-9375-acd87e92361d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 11:12:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/1984.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\1984.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 10:21:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1984.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/1984.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\1984.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 10:21:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/23e57b34-6bbd-43e6-9828-fcc39cc2d20e.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\23e57b34-6bbd-43e6-9828-fcc39cc2d20e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:19:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/23e57b34-6bbd-43e6-9828-fcc39cc2d20e.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\23e57b34-6bbd-43e6-9828-fcc39cc2d20e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:19:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/23e57b34-6bbd-43e6-9828-fcc39cc2d20e.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 10:49:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\4d2a25d0-1bc8-426b-bb95-40ff3b9c8321.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 10:49:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 11:52:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 11:52:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4eb34e2d-46f0-4d8b-ba7b-0c1ae038ee01.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/5068d930-3b22-47cd-93b4-cbdbaaf37db8.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\5068d930-3b22-47cd-93b4-cbdbaaf37db8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Jun 2025 05:39:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/5068d930-3b22-47cd-93b4-cbdbaaf37db8.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\5068d930-3b22-47cd-93b4-cbdbaaf37db8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Jun 2025 05:39:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/5068d930-3b22-47cd-93b4-cbdbaaf37db8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/85d1f307-b581-417c-b0ad-78f2a10d6969.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\85d1f307-b581-417c-b0ad-78f2a10d6969.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:04:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/85d1f307-b581-417c-b0ad-78f2a10d6969.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\85d1f307-b581-417c-b0ad-78f2a10d6969.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:04:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/85d1f307-b581-417c-b0ad-78f2a10d6969.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/88e5cce7-1854-4b4e-b847-b35037c7db36.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\88e5cce7-1854-4b4e-b847-b35037c7db36.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:05:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/88e5cce7-1854-4b4e-b847-b35037c7db36.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\88e5cce7-1854-4b4e-b847-b35037c7db36.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:05:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/88e5cce7-1854-4b4e-b847-b35037c7db36.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:18:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 07:18:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/8c4a2fcd-b1e0-4ec4-a66c-b60efa5e3868.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 06:59:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 06:59:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cb35e39b-a2dc-44c7-8dbd-047349d6b6eb.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/cc24dc5e-7d8e-4500-87ae-fd335161679b.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\cc24dc5e-7d8e-4500-87ae-fd335161679b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:58:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/cc24dc5e-7d8e-4500-87ae-fd335161679b.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\cc24dc5e-7d8e-4500-87ae-fd335161679b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 10:58:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cc24dc5e-7d8e-4500-87ae-fd335161679b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/db3ef21b-8f69-4e94-a859-c27cfe36e8b0.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\db3ef21b-8f69-4e94-a859-c27cfe36e8b0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 06:15:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/db3ef21b-8f69-4e94-a859-c27cfe36e8b0.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\db3ef21b-8f69-4e94-a859-c27cfe36e8b0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 06:15:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/db3ef21b-8f69-4e94-a859-c27cfe36e8b0.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 06:01:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Jun 2025 06:01:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/e2b8ddd1-3d99-4f85-83b3-18fc00726e9d.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/godan.fnqk41brk6.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\godan.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FaRd4a8XIrCqyvmnZm12lFbb9zzYcBsPt6f78KpdGw4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 10:42:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fnqk41brk6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/godan.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FaRd4a8XIrCqyvmnZm12lFbb9zzYcBsPt6f78KpdGw4="
+        }
+      ]
+    },
+    {
+      "Route": "images/godan.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\godan.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FaRd4a8XIrCqyvmnZm12lFbb9zzYcBsPt6f78KpdGw4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 10:42:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FaRd4a8XIrCqyvmnZm12lFbb9zzYcBsPt6f78KpdGw4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_1_638854385661085776.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_1_638854385661085776.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 13:39:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_1_638854385661085776.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_1_638854385661085776.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_1_638854385661085776.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 13:39:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_1_638856681030776996.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_1_638856681030776996.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 05:25:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_1_638856681030776996.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_1_638856681030776996.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 05:25:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_1_638856681030776996.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852379821763034.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852379821763034.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 05:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_2_638852379821763034.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852379821763034.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852379821763034.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 05:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852381224875217.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852381224875217.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 05:58:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_2_638852381224875217.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852381224875217.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852381224875217.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 05:58:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852382015735276.hd0rj5glr7.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852382015735276.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 06:00:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hd0rj5glr7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_2_638852382015735276.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852382015735276.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852382015735276.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 06:00:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-paHi7MezAgYr/M/rx436alIsjMCU40vQ2xcPYZKQGZ4="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852383887579470.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852383887579470.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 06:03:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_2_638852383887579470.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_2_638852383887579470.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Jun 2025 06:03:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_2_638852383887579470.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_25_638868876809635530.aym6qyaa7t.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_25_638868876809635530.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Jun 2025 08:11:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aym6qyaa7t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_25_638868876809635530.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_25_638868876809635530.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_25_638868876809635530.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Jun 2025 08:11:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_8_638856693916665849.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_8_638856693916665849.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 05:46:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/profile_8_638856693916665849.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\profile_8_638856693916665849.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 05:46:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/profile_8_638856693916665849.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/thegreatgatsby.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\thegreatgatsby.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 10:21:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/thegreatgatsby.sj85rkkjwv.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\thegreatgatsby.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 10:21:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sj85rkkjwv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/thegreatgatsby.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iIXEurJ4vv96YJf2FdPjTVYBugtlbi3H7F7w+oXuDVQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/tokillamockingbird.aym6qyaa7t.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\tokillamockingbird.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 10:22:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aym6qyaa7t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/tokillamockingbird.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw="
+        }
+      ]
+    },
+    {
+      "Route": "images/tokillamockingbird.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\images\\tokillamockingbird.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 10:22:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw="
+        }
+      ]
+    },
+    {
+      "Route": "review-images/6ab8d510-75d9-459a-8c75-3b6ef276796e.aym6qyaa7t.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\review-images\\6ab8d510-75d9-459a-8c75-3b6ef276796e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 09:29:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aym6qyaa7t"
+        },
+        {
+          "Name": "label",
+          "Value": "review-images/6ab8d510-75d9-459a-8c75-3b6ef276796e.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw="
+        }
+      ]
+    },
+    {
+      "Route": "review-images/6ab8d510-75d9-459a-8c75-3b6ef276796e.png",
+      "AssetFile": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\wwwroot\\review-images\\6ab8d510-75d9-459a-8c75-3b6ef276796e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 09:29:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-svtI3Meeg+NKAEN/GdVhEVnMlPkUR+K+dLR4ZQ6vuOw="
+        }
+      ]
+    }
+  ]
+}

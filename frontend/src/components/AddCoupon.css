@@ -1,0 +1,80 @@
+.coupon-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-coupons {
+    max-width: 500px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.coupon-form-table input[type="text"],
+.coupon-form-table input[type="number"],
+.coupon-form-table input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.coupon-form-table input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-left: 5px;
+}
+
+.coupon-form-table td,
+.coupon-form-table th{
+    border: none;
+}
+
+.coupon-form-table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1f7c35;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coupon-form {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}

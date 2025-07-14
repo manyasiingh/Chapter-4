@@ -1,0 +1,28 @@
+Authentication & Profile Features
+✅ Email Verification on Signup.
+
+✅ Password Reset via OTP or Email Link.
+
+💳 Checkout & Payment
+✅ Dummy Payment Gateways (like Razorpay for test mode).
+
+📦 Order Management
+✅ Order Tracking with status updates (Pending, Shipped, Delivered).
+
+✅ Download Invoice (PDF).
+
+✅ Notification on Order Updates (email or toast).
+
+🧠 UI/UX Improvements
+
+✅ Responsive Design (mobile-friendly).
+
+✅ Loading Spinners / Skeletons.
+
+✅ 404 Not Found Page.
+
+AR / VR 
+
+Swiping Images
+
+Scroll bar (Horizontal bar)

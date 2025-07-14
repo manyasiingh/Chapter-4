@@ -1,0 +1,78 @@
+.admin-faq-container {
+   max-width: 500px;
+  margin: 0 auto;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+.faq-question-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.answer-form textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.answer-form button {
+    margin-top: 8px;
+    padding: 6px 12px;
+}
+
+.answered-section {
+    margin-top: 10px;
+    background-color: #e0ffe0;
+    padding: 10px;
+    border-left: 4px solid green;
+}
+
+.submit,
+.delete {
+    margin-left: 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit {
+    background-color: #28a745;
+    color: white;
+}
+
+.submit:hover {
+    background-color: #218838;
+}
+
+.ans {
+    color: #2c3e50;
+}
+
+.em {
+    color: #2c3e50;
+}
+
+.span {
+    color: black;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #9e2f27;
+}

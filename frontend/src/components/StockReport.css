@@ -1,0 +1,67 @@
+.stock-report {
+    max-width: 600px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.back-button {
+    background-color: transparent;
+    border: none;
+    color: #2c3e50;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.stock-table {
+    width: 100%;
+    color: #2c3e50;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.stock-table th,
+.stock-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+    color: #2c3e50;
+}
+
+.stock-table th {
+    text-align: center;
+}
+
+.stock-table td {
+    font-size: 14px;
+}
+
+.stock-table td:last-child {
+    font-weight: bold;
+}
+
+.stock-table td:nth-child(4) {
+    color: #008000;
+}
+
+.stock-table td.out-of-stock {
+    color: red;
+}
+
+.stock-table td.low-stock {
+    color: orange;
+}

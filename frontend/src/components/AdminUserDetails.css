@@ -1,0 +1,91 @@
+.edit-user-container {
+    max-width: 600px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.edit-user-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.edit-user-table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+.edit-user-table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.edit-user-table td,
+.edit-user-table th {
+    border: 1px solid #ccc;
+}
+
+.edit-user-table label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.edit-user-table input,
+.edit-user-table select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.update-btn,
+.clear-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.update-btn{
+    background-color: #4CAF50;
+}
+
+.update-btn:hover {
+    background-color: #2e6e30;
+}
+
+.clear-btn{
+    background-color: #e73f3f;
+}
+
+.clear-btn:hover{
+    background-color: #af3b3b;
+}
+
+.back-button {
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}

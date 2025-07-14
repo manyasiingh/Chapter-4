@@ -1,0 +1,103 @@
+.admin-chat-container {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.user-list {
+    width: 250px;
+    border-right: 1px solid #ccc;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.user-item {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-item:hover,
+.user-item.active {
+    font-weight: bold;
+}
+
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.chat-header {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.my-message,
+.their-message {
+    margin: 5px 0;
+    padding: 10px;
+    color: #2c3e50;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.my-message {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+}
+
+.their-message {
+    background-color: #f8d7da;
+    align-self: flex-start;
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.back-button {
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}
+
+.chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 8px;
+}
+
+.chat-form button {
+    padding: 8px 12px;
+}

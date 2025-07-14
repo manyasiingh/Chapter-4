@@ -1,0 +1,76 @@
+.signup-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.signup-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.signup-form input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.signup-form button {
+  padding: 0.7rem;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.signup-form button:hover{
+  background-color: rgb(23, 90, 90);
+}
+
+.status {
+  margin-top: 1rem;
+  color: red;
+}
+
+/*login line*/
+.login-span {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-span a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.login-span a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*eye*/
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 30px; 
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #2c3e50;
+}

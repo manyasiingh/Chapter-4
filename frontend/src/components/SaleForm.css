@@ -1,0 +1,41 @@
+.back-button {
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}
+
+.admin-sales {
+    max-width: 500px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.sales-table-form td {
+    padding: 0.5rem;
+    border: none;
+}
+
+.sales-table-form input[type="text"],
+.sales-table-form input[type="number"],
+.sales-table-form input[type="date"] {
+    width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #2c3e50;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}

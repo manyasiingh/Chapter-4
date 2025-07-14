@@ -1,0 +1,39 @@
+.sale-banner-container {
+  margin: 20px auto;
+  padding: 16px;
+  max-width: 800px;
+  background-color: #fff5f5;
+  border: 2px dashed #ff4d4f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 77, 79, 0.2);
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.sale-banner h2 {
+  margin-bottom: 8px;
+  color: #c41d7f;
+  font-size: 24px;
+}
+
+.sale-banner p {
+  margin: 4px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #fff5f5;
+  }
+  50% {
+    transform: scale(1.02);
+    background-color: #ffe5e5;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #fff5f5;
+  }
+} 
+

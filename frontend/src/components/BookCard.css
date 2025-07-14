@@ -1,0 +1,56 @@
+.book-card {
+  width: 220px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+}
+
+.book-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cur{
+  cursor: pointer;
+}
+
+.book-card button {
+  padding: 8px 12px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #145a9e;
+}
+
+/*wishlist heart*/
+.wishlist-icon {
+  background-color: white;
+  border: 1px solid lightgray;
+    border-radius: 50%;
+  color: red;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.wishlist-icon.selected {
+  color: red;
+}
