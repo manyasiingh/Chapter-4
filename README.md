@@ -43,15 +43,6 @@ Chapter 4 addresses these pain points by offering:
 *   **Recommendation Engine:** Gets smarter the more you use it.
 *   **Secure Checkout Process:** Integrated with popular payment gateways.
 
-## 🛠️ Tech Stack
-
-*   **Frontend:** React.js, Context API (or Redux), React Router, Tailwind CSS
-*   **Backend:** Node.js, Express.js
-*   **Database:** MongoDB / PostgreSQL
-*   **Authentication:** JWT (JSON Web Tokens)
-*   **Payments:** Integration with Stripe / Razorpay API
-*   **Deployment:** Vercel (Frontend), Heroku/Railway (Backend)
-
 ## 📦 Installation & Setup
 
 1.  **Clone the repository:**
@@ -65,10 +56,9 @@ Chapter 4 addresses these pain points by offering:
     npm install
     ```
 
-3.  **Set up environment variables:**
-4.  
+3.  **Set up environment variables:**  
 
-5.  **Run the development server:**
+4.  **Run the development server:**
     ```bash
     npm start
     ```
