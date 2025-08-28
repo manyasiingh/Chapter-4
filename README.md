@@ -66,13 +66,9 @@ Chapter 4 addresses these pain points by offering:
     ```
 
 3.  **Set up environment variables:**
-    Create a `.env` file in the root directory and add your necessary keys:
-    ```env
-    REACT_APP_API_BASE_URL=your_backend_api_url_here
-    REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-    ```
+4.  
 
-4.  **Run the development server:**
+5.  **Run the development server:**
     ```bash
     npm start
     ```
