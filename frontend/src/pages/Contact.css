@@ -1,0 +1,102 @@
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-status {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact-info {
+  margin-top: 3rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  justify-items: center;
+}
+
+.contact-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact-form td,
+.contact-form th {
+  border: none;
+}
+
+.contact-form td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.contact-form td:first-child {
+  text-align: right;
+  white-space: nowrap;
+  font-weight: bold;
+  width: 30%;
+}
+
+.contact-form input,
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-left: 4px solid orange;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+.contact-form button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}

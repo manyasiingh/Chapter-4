@@ -1,0 +1,56 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.trending-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-image {
+  width: 50%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.book-card h4 {
+  margin: 0.5rem 0;
+}
+
+.book-card button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #005fa3;
+}
+
+.quiz-link{
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.quiz-link:hover {
+  text-decoration: underline;
+}

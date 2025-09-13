@@ -1,0 +1,100 @@
+.back-button {
+  border: none;
+  color: #2c3e50;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.back-button svg {
+  margin-right: 5px;
+}
+
+.admin-order-details {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid #2c3e50;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-order-details h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.admin-order-details h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.admin-order-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.order-table {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: none;
+}
+
+.order-table th {
+  width: 150px;
+  color: #2c3e50;
+  vertical-align: top;
+}
+
+.order-table ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.order-table li {
+  padding: 4px 0;
+}
+
+.update-status,
+.delete {
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.update-status {
+  background-color: #28a745;
+  color: white;
+}
+
+.update-status:hover {
+  background-color: #218838;
+}
+
+.delete {
+  background-color: #e53935;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #c62828;
+}

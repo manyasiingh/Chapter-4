@@ -1,0 +1,120 @@
+.toggle-review-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-review-btn:hover {
+  background-color: #005fa3;
+}
+
+.review-container {
+  margin-top: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.review-item {
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+
+.review-item strong {
+  color: #0077cc;
+}
+
+.stars {
+  color: #f5c518;
+  margin: 0.25rem 0;
+}
+
+.review-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.review-form button {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.review-form button:hover {
+  background-color: #005fa3;
+}
+
+.star-input {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.star-input label {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.star-input input[type="radio"] {
+  display: none;
+}
+
+.helpful-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.helpful-section button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: 1px solid #ddd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.helpful-section button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.helpful-section button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.helpful-section button:first-of-type {
+  color: #2e7d32;
+}
+
+.helpful-section button:last-of-type {
+  color: #c62828;
+}

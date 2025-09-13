@@ -1,0 +1,259 @@
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #2c3e50;
+  padding: 20px;
+}
+
+.books-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.filter-button-wrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+
+.filter-btn {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-panel {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  z-index: 101;
+  display: flex;
+  overflow: hidden;
+}
+
+.filter-left {
+  width: 100px;
+  background: #f5f7fa;
+  padding: 15px 0;
+}
+
+.filter-left button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.filter-left button:hover {
+  background: #e1e8f0;
+  color: #333;
+}
+
+.filter-left button.active {
+  background: white;
+  color: #4a90e2;
+  font-weight: 600;
+  border-left: 3px solid #4a90e2;
+}
+
+.filter-right {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-inputs input {
+  flex: 1;
+  min-width: 0;
+}
+
+.price-inputs span {
+  color: #666;
+}
+
+.sort-group {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sort-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.sort-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.apply-btn,
+.reset-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.apply-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.apply-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.reset-btn {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.reset-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .filter-panel {
+    width: 300px;
+    flex-direction: column;
+  }
+  
+  .filter-left {
+    width: 100%;
+    display: flex;
+    padding: 0;
+  }
+  
+  .filter-left button {
+    text-align: center;
+    padding: 12px 5px;
+  }
+  
+  .filter-left button.active {
+    border-left: none;
+    border-bottom: 3px solid #4a90e2;
+  }
+  
+  .filter-right {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-panel {
+    width: 280px;
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  .filter-button-wrapper {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.nofound{
+  margin-top: '20px';
+  text-align: 'center';
+} 
+
+.filter-back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 0 8px 8px 0;
+  font-weight: bold;
+  width: fit-content;
+}

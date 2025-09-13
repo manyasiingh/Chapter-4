@@ -1,0 +1,381 @@
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7rem;
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  color: white;
+  z-index: 1000;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* logo styling */
+.navbar-logo a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+/* nav links styling */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #00ffff;
+}
+
+.navbar-login {
+  font-weight: bold;
+}
+
+.navbar-logout button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+}
+
+.navbar-logout button:hover {
+  color: #00ffff;
+}
+
+/* icon group (wishlist, cart, etc) */
+.icon-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-link {
+  position: relative;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* search bar styling */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+/* responsive */
+@media (max-width: 751px) {
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #2c3e50;
+  }
+  .navbar {
+    flex-wrap: nowrap; 
+  }
+}
+
+/* dark mode toggle */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+body.dark-mode,
+body.dark-mode .order-summary {
+  background-color: #121212;
+}
+
+body.dark-mode a,
+body.dark-mode .login-span{
+  color: white;
+}
+
+body.dark-mode .login-span a {
+  color: #007bff;
+}
+
+body.dark-mode .about-container,
+body.dark-mode strong,
+body.dark-mode .book-detail-container,
+body.dark-mode .cart-container,
+body.dark-mode .cart-item,
+body.dark-mode .order-summary,
+body.dark-mode label,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .contact-info,
+body.dark-mode .ul,
+body.dark-mode .totaling,
+body.dark-mode .ex,
+body.dark-mode .paymet,
+body.dark-mode .order-header,
+body.dark-mode .return-status,
+body.dark-mode .p,
+body.dark-mode .faq-container,
+body.dark-mode .faq-item,
+body.dark-mode .faq-question,
+body.dark-mode .faq-answer,
+body.dark-mode .user-question,
+body.dark-mode .helpful-section,
+body.dark-mode .helpful-section span,
+body.dark-mode .ask-question-form,
+body.dark-mode .ask-question-form input,
+body.dark-mode .ask-question-form textarea,
+body.dark-mode .error-message{
+  color: white;
+}
+
+body.dark-mode .book-card h3{
+  color: #2c3e50;
+}
+
+/*blog page*/
+body.dark-mode .blog-page,
+body.dark-mode .report-panel h2,
+body.dark-mode .report-panel p{
+  color: black;
+}
+
+body.dark-mode .blog-page .blog-header h1
+{
+  color: #2c3e50;
+}
+
+body.dark-mode .blog-page h2,
+body.dark-mode .blog-page .cta-button,
+body.dark-mode .blog-page .p{
+  color: white;
+}
+
+body.dark-mode .blog-page .benefit-card h3{
+  color: red;
+}
+
+body.dark-mode .blog-page .benefit-card p,
+body.dark-mode .blog-page .advantage-grid p,
+body.dark-mode .blog-page .advantage-grid h3{
+  color: #2c3e50;
+}
+
+body.dark-mode .blog-page .fa-icon,
+body.dark-mode .blog-page .benefits-section svg,
+body.dark-mode .blog-page .store-advantages svg,
+body.dark-mode .blog-page .advantage-icon {
+  color: red;
+  fill: red;
+}
+
+/*profile page*/
+body.dark-mode .profile-container p,
+body.dark-mode .wishlist-section,
+body.dark-mode .profile-table,
+body.dark-mode .recent-grid p{
+  color: white;
+}
+
+/*order summary*/
+body.dark-mode .order-summary p,
+body.dark-mode .order-summary li{
+  color: white ;
+}
+
+/* popup */
+body.dark-mode .popup-header h2,
+body.dark-mode .benefit-item h3{
+  color: #333;
+}
+ 
+/*admin*/
+body.dark-mode .admin-dashboard,
+body.dark-mode .admin-books-container,
+body.dark-mode .back-button,
+body.dark-mode .admin-orders-container,
+body.dark-mode .order-table,
+body.dark-mode .order-table th,
+body.dark-mode .admin-users-container,
+body.dark-mode .answer-date,
+body.dark-mode .faq-meta,
+body.dark-mode .sales-report-preview,
+body.dark-mode .sales-report-table,
+body.dark-mode .sales-report-table th,
+body.dark-mode .div,
+body.dark-mode .stock-report,
+body.dark-mode .stock-table td,
+body.dark-mode .stock-table th,
+body.dark-mode .earnings-report,
+body.dark-mode .earnings-table td,
+body.dark-mode .earnings-table th,
+body.dark-mode .admin-experiences-container,
+body.dark-mode .not-trending,
+body.dark-mode .book-form th,
+body.dark-mode .admin-coupons table,
+body.dark-mode .admin-coupons th,
+body.dark-mode .orders-table th,
+body.dark-mode .results-page,
+body.dark-mode .admin-experiences-container th,
+body.dark-mode .admin-chat-container,
+body.dark-mode .quiz-table,
+body.dark-mode .score,
+body.dark-mode .file,
+body.dark-mode .book-table th,
+body.dark-mode .book-table td,
+body.dark-mode .quiz-table th,
+body.dark-mode .sales-table th,
+body.dark-mode .review-table th,
+body.dark-mode .review-table td,
+body.dark-mode .sales-table td,
+body.dark-mode .admin-coupon-list,
+body.dark-mode .admin-coupon-list th,
+body.dark-mode .admin-popup-list td,
+body.dark-mode .admin-contact-queries th,
+body.dark-mode .admin-contact-queries td,
+body.dark-mode .admin-popup-list th,
+body.dark-mode .white,
+body.dark-mode .admin-users-table th{
+  color: white;
+}
+
+body.dark-mode .back-btn,
+body.dark-mode .admin-users-container,
+body.dark-mode .admin-users-table,
+body.dark-mode .admin-users-table th,
+body.dark-mode .sales-report-table,
+body.dark-mode .admin-coupons,
+body.dark-mode .chat-messages,
+body.dark-mode .add-edit-book-container,
+body.dark-mode .admin-order-details,
+body.dark-mode .edit-user-container,
+body.dark-mode .admin-quiz-container,
+body.dark-mode .admin-reviews-container,
+body.dark-mode .admin-sales-container,
+body.dark-mode .admin-experiences-container,
+body.dark-mode .admin-faq-container,
+body.dark-mode .admin-popup-list,
+body.dark-mode .admin-popup-edit,
+body.dark-mode .admin-books-container,
+body.dark-mode .admin-popup-add,
+body.dark-mode .about-container,
+body.dark-mode .contact-container,
+body.dark-mode .coupon-form,
+body.dark-mode .admin-coupon-list,
+body.dark-mode .edit-coupon-container,
+body.dark-mode .admin-sales ,
+body.dark-mode .order-history-container,
+body.dark-mode .profile-container,
+body.dark-mode .admin-about-container,
+body.dark-mode .admin-contact-container,
+body.dark-mode .admin-contact-queries,
+body.dark-mode .admin-orders-container,
+body.dark-mode .book-detail-container,
+body.dark-mode .admin-chat-container{
+  background-color: black;
+}
+
+body.dark-mode .waiting-for-answer,
+body.dark-mode em,
+body.dark-mode .userexp-table input[type="email"]{
+  background-color: #e6ffe6;
+  color: black;
+}
+
+body.dark-mode .stock-table td:nth-child(4) {
+    color: #008000; 
+}
+
+body.dark-mode .stock-table td.out-of-stock,
+body.dark-mode .red {
+    color: red;
+}
+
+body.dark-mode .stock-table td.low-stock {
+    color: orange;
+}
+
+body.dark-mode .my-message,
+body.dark-mode .results-page strong,
+body.dark-mode .quiz-container h2,
+body.dark-mode .quiz-container .back-button,
+body.dark-mode .forgot-container h2, 
+body.dark-mode .quiz-container h1,
+body.dark-mode .ask-question-form textarea,
+body.dark-mode .their-message{
+  color: #2c3e50;
+}
+
+/* sale banner */
+body.dark-mode .sale-banner-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2e2e2e 100%);
+  border: 2px dashed #ff4757; 
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.5), 
+              0 4px 20px rgba(0, 0, 0, 0.3); 
+  text-align: center;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+body.dark-mode .sale-banner h2 {
+  margin-bottom: 12px;
+  color: #ff6b81;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 107, 129, 0.4);
+}
+
+body.dark-mode .sale-banner p {
+  margin: 8px 0;
+  color: #e0e0e0; 
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+body.dark-mode .sale-banner .discount {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #ff4757;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* order history 2 box */
+body.dark-mode .order-list{
+  background-color: #221d1d;
+}

@@ -1,0 +1,68 @@
+.admin-contact-queries {
+    max-width: 900px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1f7c35;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+.back-button {
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+    background-color: rgb(170, 27, 56);
+}

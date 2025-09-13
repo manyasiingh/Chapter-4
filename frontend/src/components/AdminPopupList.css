@@ -1,0 +1,113 @@
+.admin-popup-list {
+  max-width: 600px;
+  margin: 0 auto;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+.admin-popup-list h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #2e3c50;
+}
+
+.btn-add {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.btn-add:hover {
+  background-color: #0056b3;
+}
+
+.admin-popup-list table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-popup-list th,
+.admin-popup-list td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-popup-list th {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.admin-popup-list tr,
+.admin-popup-list td {
+  color: #2c3e50;
+}
+
+.admin-popup-list td button,
+.admin-popup-list td a {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+.submit-button,
+.dis-button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.dis-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.dis-button:hover {
+  background-color: #9e2f27;
+}
+
+.back-button {
+  border: none;
+  color: #2c3e50;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.back-button svg {
+  margin-right: 5px;
+}

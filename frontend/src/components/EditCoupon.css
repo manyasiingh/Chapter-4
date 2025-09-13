@@ -1,0 +1,74 @@
+.edit-coupon-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.edit-coupon-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.coupon-edit-table td,
+.coupon-edit-table th{
+    border: none;
+}
+
+.coupon-edit-table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.coupon-edit-table input[type="text"],
+.coupon-edit-table input[type="number"],
+.coupon-edit-table input[type="date"],
+.coupon-edit-table input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-checkbox input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 6px;
+}
+
+
+.sub-btn,
+.cancel-btn {
+    margin-left: 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sub-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.sub-btn:hover {
+    background-color: #1f7c35;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #a32430;
+}

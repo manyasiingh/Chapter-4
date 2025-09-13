@@ -1,0 +1,176 @@
+.checkout-page {
+    max-width: 600px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.peymet {
+    margin-top: '20px';
+}
+
+.checkout-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.checkout-page h3 {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+.checkout-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.ul {
+    list-style: 'none';
+    padding: 0;
+    margin-bottom: '20px';
+    text-align: center;
+}
+
+.totaling {
+    margin-top: '20px';
+    text-align: 'left';
+}
+
+.checkout-page input,
+.checkout-page select {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.apply {
+    padding: 8px 10px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    align-self: flex-start;
+    background-color: #16a34a;
+}
+
+.apply:hover {
+    background-color: #15803d;
+}
+
+
+.checkout-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.checkout-page li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tick {
+    font-size: '5rem';
+    color: 'green';
+}
+
+.home {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    background-color: #007bff;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.home:hover {
+    background-color: #0056b3;
+}
+
+.checkout-page .submit-btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    align-self: flex-start;
+    background-color: #16a34a;
+}
+
+.checkout-page .submit-btn:hover {
+    background-color: #15803d;
+}
+
+.checkout-page select {
+    width: 100%;
+}
+
+.checkout-page .order-summary {
+    margin-top: 20px;
+}
+
+.checkout-page p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.checkout-page h4 {
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.backbtn,
+.place-btn {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.backbtn {
+    background-color: #6b7280;
+    color: white;
+}
+
+.backbtn:hover {
+    background-color: #4b5563;
+}
+
+.place-btn {
+    background-color: #16a34a;
+    color: white;
+}
+
+.place-btn:hover {
+    background-color: #15803d;
+}

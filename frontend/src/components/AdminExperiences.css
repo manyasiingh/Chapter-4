@@ -1,0 +1,57 @@
+.admin-experiences-container {
+    max-width: 600px;
+    margin: 0 auto;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.admin-experiences-container h2 {
+    margin-bottom: 20px;
+}
+
+.admin-experiences-container table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+.admin-experiences-container th,
+.admin-experiences-container td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.del-btn {
+    background-color: #dc3545;
+    color: white;
+    margin: 0 5px;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.del-btn:hover {
+    background-color: darkred;
+}
+
+.back-button {
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}

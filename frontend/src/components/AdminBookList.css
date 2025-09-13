@@ -1,0 +1,105 @@
+.admin-books-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.add-book-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.book-table-wrapper {
+    overflow-x: auto;
+}
+
+.book-table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+.book-table th,
+.book-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.book-thumb {
+    width: 70px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.edit-btn,
+.delete-btn {
+    margin: 0 5px;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-msg {
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}
+
+.trending-badge {
+    background-color: #ff9800;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.not-trending {
+    color: #aaa;
+    font-size: 0.8rem;
+}
