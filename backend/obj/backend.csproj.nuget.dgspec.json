@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\backend.csproj": {}
+    "C:\\Xamp\\htdocs\\Ecommerce-Bookstore\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\backend.csproj": {
+    "C:\\Xamp\\htdocs\\Ecommerce-Bookstore\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Xamp\\htdocs\\Ecommerce-Bookstore\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\hirwa.saraiya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hirwa.saraiya\\ecommerce-bookstore\\backend\\obj\\",
+        "projectPath": "C:\\Xamp\\htdocs\\Ecommerce-Bookstore\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Bhavin Saraiya\\.nuget\\packages\\",
+        "outputPath": "C:\\Xamp\\htdocs\\Ecommerce-Bookstore\\backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hirwa.saraiya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Bhavin Saraiya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -108,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

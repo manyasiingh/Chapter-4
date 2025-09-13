@@ -55,7 +55,7 @@ export default function CheckoutPage() {
                         setAppliedDiscount(quizData.discount);
                         return;
                     } else if (quizData.hasReward && subtotal < 200) {
-                        return alert("Quiz discount not applied: subtotal is less than 150");
+                        return alert("Quiz discount not applied: subtotal is less than 200");
                     }
                 }
 
