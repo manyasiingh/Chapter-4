@@ -10,6 +10,7 @@ namespace backend.Controllers
     public class AboutContentController : ControllerBase
     {
         private readonly AppDbContext _context;
+
         public AboutContentController(AppDbContext context)
         {
             _context = context;
@@ -30,15 +31,41 @@ namespace backend.Controllers
             return Ok(content);
         }
 
-        [HttpPut("{section}")]
-        public async Task<IActionResult> Update(string section, [FromBody] AboutContent updatedContent)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] AboutContent updatedContent)
         {
-            var existing = await _context.AboutContents.FirstOrDefaultAsync(a => a.Section == section);
-            if (existing == null) return NotFound();
+            // Find the existing entity by its primary key
+            var existing = await _context.AboutContents.FindAsync(id);
+            if (existing == null)
+            {
+                return NotFound();
+            }
 
+            // Update specific properties
             existing.Content = updatedContent.Content;
+            
+            // Check if the Section property is also part of the update
+            if (updatedContent.Section != null)
+            {
+                existing.Section = updatedContent.Section;
+            }
+
             await _context.SaveChangesAsync();
-            return Ok(existing);
+            return NoContent(); // Use NoContent for a successful PUT update
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var content = await _context.AboutContents.FindAsync(id);
+            if (content == null)
+            {
+                return NotFound();
+            }
+
+            _context.AboutContents.Remove(content);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }
