@@ -669,10 +669,23 @@ C:\Users\Bhavin Saraiya\Ecommerce-Bookstore\backend\obj\Debug\net9.0\refint\back
 C:\Users\Bhavin Saraiya\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.pdb
 C:\Users\Bhavin Saraiya\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\Bhavin Saraiya\Ecommerce-Bookstore\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.sourcelink.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\appsettings.Development.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\appsettings.json
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\backend.staticwebassets.runtime.json
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x86\leptonica-1.82.0.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x86\tesseract50.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x64\leptonica-1.82.0.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x64\tesseract50.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\backend.exe
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\backend.deps.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\backend.runtimeconfig.json
@@ -708,6 +721,7 @@ C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.OpenApi.dl
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Mono.TextTemplating.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\SixLabors.ImageSharp.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\SQLitePCLRaw.core.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -721,6 +735,7 @@ C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\System.Composition.H
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Tesseract.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -807,15 +822,6 @@ C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\runtimes\win-arm\nat
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.sourcelink.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -830,9 +836,3 @@ C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\refint\backend.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.pdb
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\ref\backend.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x86\leptonica-1.82.0.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x86\tesseract50.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x64\leptonica-1.82.0.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x64\tesseract50.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Tesseract.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\SixLabors.ImageSharp.dll

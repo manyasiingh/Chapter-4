@@ -15,7 +15,11 @@ export default function AdminSpinRewards() {
         try {
             const res = await fetch("https://localhost:5001/api/spin/all");
             const data = await res.json();
-            setRewards(data);
+            
+            // Always sort by ID in ascending order
+            const sortedData = [...data].sort((a, b) => a.id - b.id);
+            
+            setRewards(sortedData);
         } catch (err) {
             console.error("Error loading rewards:", err);
         }
@@ -24,9 +28,10 @@ export default function AdminSpinRewards() {
     return (
         <div className="admin-spin-container">
             {/* Back Arrow */}
-                        <button className="back-button" onClick={() => navigate('/admin/dashboard')}>
-                            <FaArrowLeft />
-                        </button>
+            <button className="back-button" onClick={() => navigate('/admin/dashboard')}>
+                <FaArrowLeft />
+            </button>
+            
             <h2>User Spin Rewards</h2>
 
             <table className="spin-table">

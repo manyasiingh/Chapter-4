@@ -30,7 +30,7 @@ namespace backend.Data
         public DbSet<AboutContent> AboutContents { get; set; }
         public DbSet<ContactInfo> ContactInfos { get; set; }
         public DbSet<CouponStock> CouponStocks { get; set; }
-
+        public DbSet<PaymentTransaction> PaymentTransactions { get; set; }
         public DbSet<SpinReward> SpinRewards { get; set; }
         public DbSet<SpinRewardOption> SpinRewardOptions { get; set; }
 

@@ -304,7 +304,10 @@ body.dark-mode .admin-contact-container,
 body.dark-mode .admin-contact-queries,
 body.dark-mode .admin-orders-container,
 body.dark-mode .book-detail-container,
-body.dark-mode .admin-chat-container{
+body.dark-mode .admin-chat-container,
+body.dark-mode .admin-spin-container,
+body.dark-mode .admin-spin-options,
+body.dark-mode .checkout-page{
   background-color: black;
 }
 
