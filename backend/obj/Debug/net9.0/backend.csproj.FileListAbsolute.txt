@@ -697,16 +697,7 @@ C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.EntityFram
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
-C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
@@ -839,3 +830,9 @@ C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\refint\backend.dll
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.pdb
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Xamp\htdocs\Ecommerce-Bookstore\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x86\leptonica-1.82.0.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x86\tesseract50.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x64\leptonica-1.82.0.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\x64\tesseract50.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\Tesseract.dll
+C:\Xamp\htdocs\Ecommerce-Bookstore\backend\bin\Debug\net9.0\SixLabors.ImageSharp.dll

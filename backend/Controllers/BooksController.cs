@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using backend.Data; 
+using backend.Data;
 using backend.Models;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
 namespace backend.Controllers
 {
@@ -48,7 +51,7 @@ namespace backend.Controllers
         }
 
         // Add a new book
-       [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> AddBook([FromForm] IFormCollection form, IFormFile? file)
         {
             if (!form.ContainsKey("category") || string.IsNullOrWhiteSpace(form["category"]))
@@ -242,6 +245,146 @@ namespace backend.Controllers
                 .ToList();
 
             return Ok(books);
+        }
+
+        // ---------------------- SEARCH BY IMAGE ----------------------
+        [HttpPost("search-by-image")]
+        public async Task<IActionResult> SearchByImage(IFormFile image)
+        {
+            if (image == null || image.Length == 0)
+                return BadRequest("Image is required");
+
+            // Save uploaded image to temp
+            string tempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + Path.GetExtension(image.FileName));
+            using (var stream = new FileStream(tempPath, FileMode.Create))
+                await image.CopyToAsync(stream);
+
+            // Compute hash of uploaded image
+            ulong uploadedHash = ComputeImageHash(tempPath);
+
+            var books = await _context.Books.ToListAsync();
+            List<Book> matchedBooks = new List<Book>();
+
+            foreach (var book in books)
+            {
+                if (string.IsNullOrWhiteSpace(book.CoverImageUrl))
+                    continue;
+
+                string fullImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", book.CoverImageUrl.TrimStart('/'));
+
+                if (!System.IO.File.Exists(fullImagePath))
+                    continue;
+
+                ulong bookHash = ComputeImageHash(fullImagePath);
+
+                int hamming = HammingDistance(uploadedHash, bookHash);
+
+                // match accuracy threshold
+                if (hamming <= 10)
+                {
+                    matchedBooks.Add(book);
+                }
+            }
+
+            // Return array of books (React expects this)
+            return Ok(matchedBooks);
+        }
+
+        // ---------------- IMAGE HASHING (pHash using ImageSharp) ----------------
+
+        // ---------------- REAL DCT pHash (best accuracy) ----------------
+
+        private static ulong ComputeImageHash(string imagePath)
+        {
+            using (var image = Image.Load<Rgba32>(imagePath))
+            {
+                // Step 1: resize to 32x32
+                image.Mutate(x => x.Resize(32, 32));
+
+                double[,] gray = new double[32, 32];
+
+                // Step 2: convert to grayscale
+                for (int y = 0; y < 32; y++)
+                {
+                    for (int x = 0; x < 32; x++)
+                    {
+                        var p = image[x, y];
+                        gray[x, y] = (p.R + p.G + p.B) / 3.0;
+                    }
+                }
+
+                // Step 3: DCT transform
+                double[,] dct = DCT2D(gray);
+
+                // Step 4: take top-left 8×8 block (low frequencies)
+                double[] values = new double[64];
+                int index = 0;
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        values[index++] = dct[x, y];
+                    }
+                }
+
+                // Step 5: compute median of the 64 DCT values
+                double median = values.OrderBy(v => v).ElementAt(32);
+
+                // Step 6: generate 64-bit hash
+                ulong hash = 0;
+                for (int i = 0; i < 64; i++)
+                {
+                    if (values[i] > median)
+                        hash |= (1UL << i);
+                }
+
+                return hash;
+            }
+        }
+
+        private static double[,] DCT2D(double[,] matrix)
+        {
+            int N = 32;
+            double[,] result = new double[N, N];
+
+            for (int u = 0; u < N; u++)
+            {
+                for (int v = 0; v < N; v++)
+                {
+                    double sum = 0.0;
+
+                    for (int x = 0; x < N; x++)
+                    {
+                        for (int y = 0; y < N; y++)
+                        {
+                            sum += matrix[x, y] *
+                                   Math.Cos(((2 * x + 1) * u * Math.PI) / (2 * N)) *
+                                   Math.Cos(((2 * y + 1) * v * Math.PI) / (2 * N));
+                        }
+                    }
+
+                    double cu = (u == 0) ? 1 / Math.Sqrt(2) : 1;
+                    double cv = (v == 0) ? 1 / Math.Sqrt(2) : 1;
+                    result[u, v] = 0.25 * cu * cv * sum;
+                }
+            }
+
+            return result;
+        }
+
+
+        private static int HammingDistance(ulong a, ulong b)
+        {
+            ulong x = a ^ b;
+            int count = 0;
+
+            while (x != 0)
+            {
+                count += (int)(x & 1);
+                x >>= 1;
+            }
+
+            return count;
         }
     }
 }

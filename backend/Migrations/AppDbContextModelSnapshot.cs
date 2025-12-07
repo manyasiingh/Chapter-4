@@ -15,7 +15,7 @@ namespace backend.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.6");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
             modelBuilder.Entity("User", b =>
                 {
@@ -601,6 +601,108 @@ namespace backend.Migrations
                     b.ToTable("Reviews");
                 });
 
+            modelBuilder.Entity("backend.Models.SpinReward", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("EarnedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("RewardType")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RewardValue")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SpinRewards");
+                });
+
+            modelBuilder.Entity("backend.Models.SpinRewardOption", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("RewardType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RewardValue")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SpinRewardOptions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            IsActive = true,
+                            RewardType = "DISCOUNT",
+                            RewardValue = "5%",
+                            SortOrder = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            IsActive = true,
+                            RewardType = "DISCOUNT",
+                            RewardValue = "10%",
+                            SortOrder = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IsActive = true,
+                            RewardType = "DISCOUNT",
+                            RewardValue = "20%",
+                            SortOrder = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            IsActive = true,
+                            RewardType = "POINTS",
+                            RewardValue = "50",
+                            SortOrder = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            IsActive = true,
+                            RewardType = "POINTS",
+                            RewardValue = "100",
+                            SortOrder = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            IsActive = true,
+                            RewardType = "FREE_DELIVERY",
+                            RewardValue = "YES",
+                            SortOrder = 6
+                        });
+                });
+
             modelBuilder.Entity("backend.Models.StartupPopupSettings", b =>
                 {
                     b.Property<int>("Id")
@@ -774,8 +876,7 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.Coupon", b =>
                 {
-                    b.Navigation("Stock")
-                        .IsRequired();
+                    b.Navigation("Stock");
                 });
 
             modelBuilder.Entity("backend.Models.Order", b =>
