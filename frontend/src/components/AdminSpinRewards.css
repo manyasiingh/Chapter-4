@@ -1,0 +1,34 @@
+.admin-spin-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.spin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.spin-table th,
+.spin-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.used {
+    color: red;
+    font-weight: bold;
+}
+
+.unused {
+    color: green;
+    font-weight: bold;
+}

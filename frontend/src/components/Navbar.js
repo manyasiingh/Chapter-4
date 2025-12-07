@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">BookStore</Link>
+        <Link to="/">Chapter 4</Link>
       </div>
 
       <ul className="navbar-links">
@@ -53,6 +53,7 @@ export default function Navbar() {
         <li><Link to="/books">Books</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/spin" className="nav-link">🎡 Spin & Win</Link></li>
         <li className="navbar-search"><BookSearchBar /></li>
 
         {/* Admin Dashboard link */}

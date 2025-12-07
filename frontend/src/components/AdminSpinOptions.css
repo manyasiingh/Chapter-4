@@ -1,0 +1,48 @@
+.admin-spin-options {
+    max-width: 900px;
+    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.option-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-form input {
+    padding: 8px;
+    width: 200px;
+}
+
+.option-form button {
+    padding: 8px 16px;
+    background: #0088ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.spin-options-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.spin-options-table th,
+.spin-options-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.delete {
+    background: red;
+    color: white;
+    margin-left: 10px;
+}

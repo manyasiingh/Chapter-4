@@ -154,7 +154,8 @@ body.dark-mode .helpful-section span,
 body.dark-mode .ask-question-form,
 body.dark-mode .ask-question-form input,
 body.dark-mode .ask-question-form textarea,
-body.dark-mode .error-message{
+body.dark-mode .error-message,
+body.dark-mode .spin-options-table{
   color: white;
 }
 
@@ -264,7 +265,10 @@ body.dark-mode .admin-contact-queries th,
 body.dark-mode .admin-contact-queries td,
 body.dark-mode .admin-popup-list th,
 body.dark-mode .white,
-body.dark-mode .admin-users-table th{
+body.dark-mode .admin-users-table th,
+body.dark-mode .spin-table,
+body.dark-mode .spin-table th,
+body.dark-mode .spin-options-table th{
   color: white;
 }
 

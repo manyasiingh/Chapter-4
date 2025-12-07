@@ -8,6 +8,7 @@ export default function AdminDashboard() {
     return (
         <div className="admin-dashboard">
             <h1>Admin Dashboard</h1>
+
             <div className="admin-buttons">
                 <button onClick={() => navigate('/admin/books')}>Manage Books</button>
                 <button onClick={() => navigate('/admin/orders')}>View Orders</button>
@@ -23,6 +24,10 @@ export default function AdminDashboard() {
                 <button onClick={() => navigate('/admin/about')}>Manage About</button>
                 <button onClick={() => navigate('/admin/contactinfo')}>Manage Contact</button>
                 <button onClick={() => navigate('/admin/contact-queries')}>Manage Contact Queries</button>
+
+                {/* ⭐ NEW SPIN FEATURES */}
+                <button onClick={() => navigate('/admin/spin-options')}>Manage Spin Wheel Options</button>
+                <button onClick={() => navigate('/admin/spin-rewards')}>View User Spin Rewards</button>
             </div>
 
             <div className="report-panels">

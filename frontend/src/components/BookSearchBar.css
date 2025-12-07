@@ -84,6 +84,21 @@
   background-color: #f0f0f0;
 }
 
+/* image */
+.image-upload-btn {
+  background: #4a4af5;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.image-upload-btn:hover {
+  background: #3333cc;
+}
+
 /* Media Query for Small Screens (e.g., mobile) */
 @media (max-width: 300px) {
   .book-search-bar {

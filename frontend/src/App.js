@@ -26,6 +26,7 @@ import ExperienceList from './pages/ExperienceList';
 import BookQuiz from './components/BookQuiz';
 import QuizResults from './components/QuizResults';
 import MonthlyQuiz from './components/MonthlyQuiz';
+import SpinWheel from "./components/SpinWheel";
 
 // admin
 import AdminDashboard from './pages/AdminDashboard';
@@ -55,12 +56,21 @@ import AdminPopupEdit from './components/AdminPopupEdit';
 import AdminAbout from './components/AdminAbout';
 import AdminContactInfo from './components/AdminContactInfo';
 import AdminContactQueries from './components/AdminContactQueries';
+
+//admin spin
+import AdminSpinRewards from './components/AdminSpinRewards';
+import AdminSpinOptions from './components/AdminSpinOptions';
+
 // live chat
 import LiveChat from './components/LiveChat';
 
 function AppContent() {
   const email = localStorage.getItem('email');
   const { user } = useContext(AuthContext);
+
+  // userId stays because other components still need it
+  const userId = user?.id || user?._id || 0;
+
   return (
     <CartProvider userEmail={user?.email}>
       <Router>
@@ -89,6 +99,9 @@ function AppContent() {
           <Route path="/book-quiz" element={<BookQuiz />} />
           <Route path="/quiz-results" element={<QuizResults />} />
           <Route path="/monthly-quiz" element={<MonthlyQuiz />} />
+
+          {/* 🔥 FINAL FIX — SPIN USES EMAIL */}
+          <Route path="/spin" element={<SpinWheel userEmail={user?.email} />} />
 
           {/* Admin Routes */}
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
@@ -120,6 +133,9 @@ function AppContent() {
           <Route path="/admin/about" element={<AdminAbout />} />
           <Route path="/admin/contactinfo" element={<AdminContactInfo />} />
           <Route path="/admin/contact-queries" element={<AdminContactQueries />} />
+          {/* admin spin */}
+          <Route path="/admin/spin-rewards" element={<AdminSpinRewards />} />
+          <Route path="/admin/spin-options" element={<AdminSpinOptions />} />
         </Routes>
         <Footer />
         {user?.role === 'User' && <LiveChat userEmail={email} />}

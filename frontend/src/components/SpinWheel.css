@@ -1,0 +1,191 @@
+.spin-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* wheel size */
+.wheel-wrapper {
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+/* wheel circle with stroke */
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #444;
+  background: conic-gradient(
+    #ff7675 0deg 60deg,
+    #74b9ff 60deg 120deg,
+    #55efc4 120deg 180deg,
+    #ffeaa7 180deg 240deg,
+    #a29bfe 240deg 300deg,
+    #fab1a0 300deg 360deg
+  );
+  box-sizing: border-box;
+  transition: transform 3s cubic-bezier(.22,.9,.25,1);
+}
+
+/* label boxes placed by inline transform from JSX */
+.label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 110px;
+  margin-left: -55px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #2d3436;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.4s ease, text-shadow 0.3s ease;
+}
+
+/* highlight winner slice label (slightly larger / shadow) */
+.label.winner {
+  transform: scale(1.06) !important;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* top fixed pointer (triangle) */
+.top-pointer {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 26px solid #2d3436;
+  z-index: 20;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
+}
+
+/* small "tick" pulse while spinning to make pointer feel alive */
+.top-pointer.tick {
+  animation: pointerTick 0.35s linear infinite;
+}
+
+@keyframes pointerTick {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-4px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* spin button */
+.spin-button {
+  margin-top: 18px;
+  padding: 10px 22px;
+  background: #6c5ce7;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.spin-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* reward modal */
+.reward-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;      /* 🔥 FIXED */
+}
+
+.reward-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 10000;     /* 🔥 FIXED */
+}
+
+
+.reward-card h2 { margin: 0 0 8px 0; color: #2d3436; }
+.big-reward { font-size: 18px; font-weight: 800; color: #1b4332; margin: 12px 0; }
+
+.reward-actions { display:flex; gap: 10px; justify-content:center; margin-top: 12px; }
+.apply-btn {
+  background: #00a86b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.close-btn {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Close X inside reward popup */
+.close-x {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 11000;      /* 🔥 FIXED */
+    pointer-events: auto; /* ensure clickable */
+}
+
+.close-x:hover {
+  color: #000;
+}
+
+.timer-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ffeaa7;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.timer-box h2 {
+  margin: 5px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.disabled-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: not-allowed;
+
+    background: #c7c7c7;   /* lighter grey */
+    color: #555;           /* medium text */
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+.disabled-button:hover {
+    opacity: 1;
+}

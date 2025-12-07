@@ -21,8 +21,9 @@ export default function EarningsReport() {
             <button className="back-button" onClick={() => navigate(-1)}>
                 <FaArrowLeft />
             </button>
+
             <h2>Earnings Report</h2>
-            {/* <p><strong>Total Revenue:</strong> ₹{report.totalRevenue}</p> */}
+
             <table className="earnings-table">
                 <thead>
                     <tr>
@@ -32,17 +33,20 @@ export default function EarningsReport() {
                 </thead>
                 <tbody>
                     {report.monthlyRevenue.length === 0 ? (
-                        <tr><td colSpan="2">No data available</td></tr>
+                        <tr>
+                            <td colSpan="2">No data available</td>
+                        </tr>
                     ) : (
-                        report.monthlyRevenue.map((m, i) => (
-                            <tr key={i}>
-                                <td>{m.month}</td> {/* lowercase 'month' */}
-                                <td>₹{m.revenue ? m.revenue.toFixed(2) : '0.00'}</td> {/* lowercase 'revenue' */}
+                        report.monthlyRevenue.map((m, index) => (
+                            <tr key={index}>
+                                <td>{m.month}</td>
+                                <td>₹{m.revenue ? m.revenue.toFixed(2) : "0.00"}</td>
                             </tr>
                         ))
                     )}
                 </tbody>
             </table>
+
             <p><strong>Total Revenue (All Status):</strong> ₹{report.revenueAll.toFixed(2)}</p>
             <p><strong>Delivered Revenue:</strong> ₹{report.revenueDelivered.toFixed(2)}</p>
             <p><strong>Returned Revenue:</strong> ₹{report.revenueReturned.toFixed(2)}</p>

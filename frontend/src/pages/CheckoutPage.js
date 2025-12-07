@@ -3,16 +3,32 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import './CheckoutPage.css';
 
+// SAFE JSON PARSER
+async function safeJson(response) {
+    const text = await response.text();
+    try {
+        return JSON.parse(text);
+    } catch {
+        return null;
+    }
+}
+
 export default function CheckoutPage() {
     const navigate = useNavigate();
     const email = localStorage.getItem('email');
+
     const [availableCoupons, setAvailableCoupons] = useState([]);
     const [activeSale, setActiveSale] = useState(null);
     const [quizDiscount, setQuizDiscount] = useState(null);
 
+    const [spinReward, setSpinReward] = useState(null);
+    const [spinDiscount, setSpinDiscount] = useState(0);
+    const [spinApplied, setSpinApplied] = useState(false);
+
     const orderData = useMemo(() => {
         return JSON.parse(localStorage.getItem('orderData')) || [];
     }, []);
+
     const [savedAddresses, setSavedAddresses] = useState([]);
     const [selectedAddressId, setSelectedAddressId] = useState('new');
     const [address, setAddress] = useState({
@@ -28,49 +44,45 @@ export default function CheckoutPage() {
     const [appliedDiscount, setAppliedDiscount] = useState(0);
     const [couponError, setCouponError] = useState('');
 
-    useEffect(() => {
-        if (!orderData.length && step !== 3 && !orderPlaced) {
-            alert("No order data found. Redirecting to cart.");
-            navigate('/cart');
-        }
-    }, [orderData, step, orderPlaced, navigate]);
-
     const subtotal = orderData.reduce((sum, item) => sum + item.quantity * item.book.price, 0);
 
-    useEffect(() => {
-        fetch(`https://localhost:5001/api/addresses/user/${email}`)
-            .then(res => res.json())
-            .then(setSavedAddresses)
-            .catch(err => console.error("Failed to fetch addresses:", err));
-    }, [email]);
-
+    // ----------------------------------------------------------
+    // FETCH DISCOUNTS (QUIZ + SALE + COUPON + SPIN)
+    // ----------------------------------------------------------
     useEffect(() => {
         async function fetchDiscounts() {
             try {
+                // QUIZ
                 const quizRes = await fetch(`https://localhost:5001/api/monthlyquiz/reward/${email}`);
-                if (quizRes.ok) {
-                    const quizData = await quizRes.json();
-                    if (quizData.hasReward && quizData.discount > 0 && subtotal >= 150) {
-                        setQuizDiscount(quizData);
-                        setAppliedDiscount(quizData.discount);
-                        return;
-                    } else if (quizData.hasReward && subtotal < 200) {
-                        return alert("Quiz discount not applied: subtotal is less than 200");
-                    }
+                const quizData = quizRes.ok ? await safeJson(quizRes) : null;
+
+                if (quizData && quizData.hasReward && quizData.discount > 0 && subtotal >= 150) {
+                    setQuizDiscount(quizData);
+                    setAppliedDiscount(quizData.discount);
                 }
 
-                const saleRes = await fetch('https://localhost:5001/api/saleevent/active');
-                const saleData = saleRes.ok ? await saleRes.json() : [];
-
+                // SALE
+                const saleRes = await fetch(`https://localhost:5001/api/saleevent/active`);
+                const saleData = saleRes.ok ? (await safeJson(saleRes) || []) : [];
                 if (saleData.length > 0) {
-                    const bestSale = saleData.reduce((a, b) => a.discountPercentage > b.discountPercentage ? a : b);
+                    const bestSale = saleData.reduce((a, b) =>
+                        a.discountPercentage > b.discountPercentage ? a : b
+                    );
                     setActiveSale(bestSale);
                 }
 
-                // Fetch only valid coupons for this user
+                // COUPONS
                 const couponRes = await fetch(`https://localhost:5001/api/coupons/my-valid/${email}`);
-                const validCoupons = couponRes.ok ? await couponRes.json() : [];
+                const validCoupons = couponRes.ok ? (await safeJson(couponRes) || []) : [];
                 setAvailableCoupons(validCoupons);
+
+                // SPIN
+                const spinRes = await fetch(`https://localhost:5001/api/spin/unused/${encodeURIComponent(email)}`);
+                const spinData = spinRes.ok ? await safeJson(spinRes) : null;
+
+                if (spinData && spinData.rewardValue) {
+                    setSpinReward(spinData);
+                }
 
             } catch (err) {
                 console.error("Failed to fetch discounts:", err);
@@ -80,6 +92,79 @@ export default function CheckoutPage() {
         fetchDiscounts();
     }, [email, subtotal]);
 
+    // ----------------------------------------------------------
+    // FETCH SAVED ADDRESSES (FIXED)
+    // ----------------------------------------------------------
+    useEffect(() => {
+        async function loadAddresses() {
+            try {
+                const res = await fetch(
+                    `https://localhost:5001/api/addresses/user/${encodeURIComponent(email)}`
+                );
+
+                const data = res.ok ? await safeJson(res) : [];
+
+                if (Array.isArray(data)) {
+                    setSavedAddresses(data);
+                } else {
+                    setSavedAddresses([]);
+                }
+            } catch (err) {
+                console.error("Failed to load addresses:", err);
+                setSavedAddresses([]);
+            }
+        }
+
+        loadAddresses();
+    }, [email]);
+
+    // ----------------------------------------------------------
+    // APPLY SPIN REWARD
+    // ----------------------------------------------------------
+    const applySpinReward = () => {
+        if (!spinReward) return;
+
+        let val = (spinReward.rewardValue || "").toString().toLowerCase();
+        let discountValue = 0;
+
+        if (val.includes("%")) {
+            const num = parseInt(val.replace("%", ""), 10);
+            discountValue = (subtotal * num) / 100;
+        } else if (!isNaN(parseInt(val, 10))) {
+            const numeric = parseInt(val, 10);
+            if (numeric === 50) discountValue = 5;
+            else if (numeric === 100) discountValue = 10;
+            else discountValue = numeric;
+        } else if (val.includes("₹")) {
+            const num = parseInt(val.replace(/[^\d]/g, ""), 10);
+            discountValue = num;
+        } else if (val.includes("free") || val === "yes") {
+            discountValue = 50;
+        }
+
+        setSpinDiscount(discountValue);
+        setSpinApplied(true);
+        setAppliedDiscount(0);
+        setCouponCode("");
+        alert("🎡 Spin reward applied!");
+    };
+
+    // ----------------------------------------------------------
+    // DISCOUNT PRIORITY
+    // ----------------------------------------------------------
+    const discount =
+        (quizDiscount ? quizDiscount.discount : 0) ||
+        (activeSale ? subtotal * (activeSale.discountPercentage / 100) : 0) ||
+        (spinApplied ? spinDiscount : appliedDiscount);
+
+    const tipAmount = parseFloat(tip || 0);
+    const preShippingTotal = subtotal - discount + tipAmount;
+    const shippingCharge = preShippingTotal < 100 ? 50 : 0;
+    const total = preShippingTotal + shippingCharge;
+
+    // ----------------------------------------------------------
+    // ADDRESS HANDLING
+    // ----------------------------------------------------------
     const handleChange = (e) => {
         const { name, value } = e.target;
         setAddress(prev => ({ ...prev, [name]: value }));
@@ -87,42 +172,28 @@ export default function CheckoutPage() {
 
     const isAddressDuplicate = (newAddr) => {
         return savedAddresses.some(addr =>
-            addr.fullName.trim().toLowerCase() === newAddr.fullName.trim().toLowerCase() &&
-            addr.street.trim().toLowerCase() === newAddr.street.trim().toLowerCase() &&
-            addr.city.trim().toLowerCase() === newAddr.city.trim().toLowerCase() &&
-            addr.state.trim().toLowerCase() === newAddr.state.trim().toLowerCase() &&
-            addr.zip.trim().toLowerCase() === newAddr.zip.trim().toLowerCase() &&
-            addr.country.trim().toLowerCase() === newAddr.country.trim().toLowerCase() &&
-            addr.phone.trim() === newAddr.phone.trim()
+            addr.fullName?.trim().toLowerCase() === newAddr.fullName?.trim().toLowerCase() &&
+            addr.street?.trim().toLowerCase() === newAddr.street?.trim().toLowerCase() &&
+            addr.city?.trim().toLowerCase() === newAddr.city?.trim().toLowerCase() &&
+            addr.state?.trim().toLowerCase() === newAddr.state?.trim().toLowerCase() &&
+            addr.zip?.trim().toLowerCase() === newAddr.zip?.trim().toLowerCase() &&
+            addr.country?.trim().toLowerCase() === newAddr.country?.trim().toLowerCase() &&
+            addr.phone?.trim() === newAddr.phone?.trim()
         );
     };
-
-    const discount = quizDiscount
-        ? quizDiscount.discount
-        : activeSale
-            ? subtotal * (activeSale.discountPercentage / 100)
-            : appliedDiscount;
-
-    const tipAmount = parseFloat(tip || 0);
-    const preShippingTotal = subtotal - discount + tipAmount;
-    const shippingCharge = preShippingTotal < 100 ? 50 : 0;
-    const total = preShippingTotal + shippingCharge;
 
     const validateStep1 = () => {
         if (selectedAddressId === 'new') {
             for (const key in address) {
-                if (!address[key].trim()) {
-                    alert(`Please fill in your ${key}`);
+                if (!address[key]?.trim()) {
+                    alert(`Please fill your ${key}`);
                     return false;
                 }
             }
             if (isAddressDuplicate(address)) {
-                alert('This address already exists.');
+                alert("This address already exists.");
                 return false;
             }
-        } else if (!savedAddresses.find(addr => addr.id.toString() === selectedAddressId)) {
-            alert('Invalid address selected.');
-            return false;
         }
         return true;
     };
@@ -132,15 +203,20 @@ export default function CheckoutPage() {
         if (validateStep1()) setStep(2);
     };
 
-    const handleBack = () => setStep(1);
-
+    // ----------------------------------------------------------
+    // APPLY COUPON
+    // ----------------------------------------------------------
     const applyCoupon = async () => {
+        if (spinApplied) {
+            setCouponError("Coupons cannot be used with Spin Reward.");
+            return;
+        }
         if (quizDiscount) {
-            setCouponError("Coupons are disabled when a quiz discount is applied.");
+            setCouponError("Quiz reward active. Coupon disabled.");
             return;
         }
         if (activeSale) {
-            setCouponError("Coupons are not allowed during an active sale.");
+            setCouponError("Sale is active. Coupon disabled.");
             return;
         }
 
@@ -149,53 +225,44 @@ export default function CheckoutPage() {
                 `https://localhost:5001/api/coupons/apply?code=${couponCode}&totalAmount=${subtotal}&email=${email}`
             );
 
-            if (!res.ok) {
-                const error = await res.text();
-                setCouponError(error || "Coupon cannot be applied.");
+            const data = await safeJson(res);
+
+            if (!res.ok || !data) {
+                setCouponError(data?.message || "Invalid coupon");
                 setAppliedDiscount(0);
                 return;
             }
 
-            const data = await res.json();
-
-            if (data.discountAmount === 0 && data.message) {
+            if (data.message) {
                 setCouponError(data.message);
                 setAppliedDiscount(0);
                 return;
             }
 
-            setAppliedDiscount(data.discountAmount);
+            setAppliedDiscount(data.discountAmount || 0);
             setCouponError('');
-
-            // Show success message for the 50% coupon
-            if (couponCode.startsWith('NEXT50')) {
-                alert("🎉 50% discount applied! This is a one-time use coupon.");
-            }
         } catch (err) {
-            setCouponError('Error applying coupon.');
-            setAppliedDiscount(0);
+            console.error(err);
+            setCouponError("Error applying coupon.");
         }
     };
 
+    // ----------------------------------------------------------
+    // PLACE ORDER
+    // ----------------------------------------------------------
     const handlePlaceOrder = async () => {
-        if (selectedAddressId === 'new') {
-            const addressRes = await fetch('https://localhost:5001/api/addresses', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, ...address }),
-            });
 
-            if (!addressRes.ok) {
-                alert('Failed to save address.');
-                return;
-            }
+        if (selectedAddressId === 'new') {
+            await fetch(`https://localhost:5001/api/addresses`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, ...address })
+            });
         }
 
-        const discountToSend = quizDiscount ? quizDiscount.discount : appliedDiscount;
+        if (!window.confirm("Place Order?")) return;
 
-        if (!window.confirm('Are you sure you want to place this order?')) return;
-
-        const orderPayload = {
+        const payload = {
             email,
             items: orderData.map(item => ({
                 BookId: item.book.id,
@@ -203,118 +270,126 @@ export default function CheckoutPage() {
                 Price: item.book.price
             })),
             subtotal,
-            discount: discountToSend,
+            discount,
             tip: tipAmount,
             shippingCharge,
             total,
             paymentMethod
         };
 
-        // Only attach coupon code if no quiz reward is used
-        if (!quizDiscount && couponCode) {
-            orderPayload.couponCode = couponCode;
+        if (couponCode && !spinApplied && !quizDiscount && !activeSale) {
+            payload.couponCode = couponCode;
         }
 
+        const orderRes = await fetch(`https://localhost:5001/api/orders`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+
+        const orderJson = await safeJson(orderRes);
+
+        // Mark spin used
+        if (spinApplied && spinReward) {
+            await fetch(`https://localhost:5001/api/spin/mark-used/${spinReward.id}`, { method: "POST" });
+        }
+
+        // Consume quiz
+        if (quizDiscount) {
+            await fetch(`https://localhost:5001/api/monthlyquiz/consume-reward/${email}`, {
+                method: "POST"
+            });
+        }
+
+        // Clear cart backend + local
+        localStorage.removeItem("orderData");
+        window.dispatchEvent(new Event("clearLocalCart"));
+
+        await fetch(`https://localhost:5001/api/cartitems/clear/${email}`, {
+            method: "DELETE"
+        });
+
         setOrderDetails({
-            items: orderData.map(item => ({
-                title: item.book.title,
-                price: item.book.price,
-                quantity: item.quantity
-            })),
+            items: orderData,
             subtotal,
-            discount: discountToSend,
+            discount,
             tipAmount,
             shippingCharge,
             total,
             paymentMethod
         });
 
-        try {
-            const orderRes = await fetch('https://localhost:5001/api/orders', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(orderPayload),
-            });
-
-            if (!orderRes.ok) {
-                const errorText = await orderRes.text();
-                alert(`Order failed: ${errorText}`);
-                return;
-            }
-
-            const orderResult = await orderRes.json();
-
-            // Show coupon earned message if applicable
-            if (total >= 1000) {
-                setTimeout(() => {
-                    alert("🎉 You've earned a 50% discount coupon for your next order! Check your account for details.");
-                }, 1000);
-            }
-
-            localStorage.removeItem('orderData');
-            window.dispatchEvent(new Event('clearLocalCart'));
-
-            await fetch(`https://localhost:5001/api/cartitems/clear/${email}`, {
-                method: 'DELETE'
-            });
-
-            if (quizDiscount) {
-                await fetch(`https://localhost:5001/api/monthlyquiz/consume-reward/${email}`, {
-                    method: 'POST'
-                });
-            }
-
-            setOrderPlaced(true);
-            setStep(3);
-        } catch (err) {
-            console.error('Error placing order:', err);
-            alert('Order failed due to a network error.');
-        }
+        setOrderPlaced(true);
+        setStep(3);
     };
 
+    // ----------------------------------------------------------
+    // STEP 3 — DETAILED SUMMARY (same as your original)
+    // ----------------------------------------------------------
     if (step === 3 && orderPlaced && orderDetails) {
         return (
-            <div className="checkout-page" style={{ textAlign: 'center', paddingTop: '50px' }}>
+            <div className="checkout-page" style={{ textAlign: 'center', paddingTop: 50 }}>
                 <h2>Order Placed Successfully!</h2>
                 <div style={{ fontSize: '5rem', color: 'green' }}>&#10004;</div>
-                <p className='paymet'><strong>Payment Method:</strong> {orderDetails.paymentMethod}</p>
+
+                <p className="paymet">
+                    <strong>Payment Method:</strong> {orderDetails.paymentMethod}
+                </p>
+
                 <h3>Order Items</h3>
-                <ul className='ul'>
-                    {orderDetails.items.map((item, index) => (
-                        <li key={index}>
-                            <center>{item.title} — ₹{item.price.toFixed(2)} × {item.quantity} = ₹{(item.price * item.quantity).toFixed(2)}</center>
+                <ul className="ul">
+                    {orderDetails.items.map((item, i) => (
+                        <li key={i}>
+                            <center>
+                                {item.book.title} — ₹{item.book.price.toFixed(2)}
+                                × {item.quantity} = ₹{(item.book.price * item.quantity).toFixed(2)}
+                            </center>
                         </li>
                     ))}
                 </ul>
-                <div className='totaling'>
+
+                <div className="totaling">
                     <p><strong>Subtotal:</strong> ₹{orderDetails.subtotal.toFixed(2)}</p>
                     <p><strong>Discount:</strong> -₹{orderDetails.discount.toFixed(2)}</p>
                     <p><strong>Tip:</strong> ₹{orderDetails.tipAmount.toFixed(2)}</p>
                     {orderDetails.shippingCharge > 0 && (
                         <p><strong>Shipping Charges:</strong> ₹{orderDetails.shippingCharge.toFixed(2)}</p>
                     )}
-                    <h4 className='ex'>Total Paid: ₹{orderDetails.total.toFixed(2)}</h4>
+                    <h4 className="ex">Total Paid: ₹{orderDetails.total.toFixed(2)}</h4>
                 </div>
-                <button className='home' onClick={() => navigate('/')}>Back to Home</button>
+
+                <button className="home" onClick={() => navigate('/')}>
+                    Back to Home
+                </button>
             </div>
         );
     }
 
+    // ----------------------------------------------------------
+    // STEP 1 + STEP 2
+    // ----------------------------------------------------------
     return (
         <div className="checkout-page">
-            <button className="back-button" onClick={() => navigate(-1)}><FaArrowLeft /></button>
+            <button className="back-button" onClick={() => navigate(-1)}>
+                <FaArrowLeft />
+            </button>
             <h2>Checkout</h2>
 
+            {/* STEP 1 ------------------------------------------------- */}
             {step === 1 && (
                 <form onSubmit={handleNext}>
                     <h3>Choose Address</h3>
-                    <select value={selectedAddressId} onChange={(e) => setSelectedAddressId(e.target.value)}>
+
+                    <select
+                        value={selectedAddressId}
+                        onChange={(e) => setSelectedAddressId(e.target.value)}
+                    >
                         {savedAddresses.map(addr => (
                             <option key={addr.id} value={addr.id}>
                                 {addr.fullName}, {addr.street}, {addr.city}
                             </option>
                         ))}
-                        <option value="new"> +Add New Address</option>
+                        <option value="new">+ Add New Address</option>
                     </select>
 
                     {selectedAddressId === 'new' && (
@@ -333,95 +408,85 @@ export default function CheckoutPage() {
                             ))}
                         </>
                     )}
+
                     <button type="submit" className="submit-btn">Next</button>
                 </form>
             )}
 
+            {/* STEP 2 ------------------------------------------------- */}
             {step === 2 && (
                 <div>
                     <h3>Order Summary</h3>
-                    <ul className='ul'>
+
+                    {/* SPIN REWARD */}
+                    {spinReward && !spinApplied && !quizDiscount && !activeSale && (
+                        <div style={{
+                            marginTop: 12, padding: 12,
+                            background: "#eef8ff", borderRadius: 8
+                        }}>
+                            <h4>🎡 Spin Reward Available!</h4>
+                            <p><strong>{spinReward.rewardType}</strong> : {spinReward.rewardValue}</p>
+                            <button className="apply" onClick={applySpinReward}>
+                                Apply Spin Reward
+                            </button>
+                        </div>
+                    )}
+
+                    {spinApplied && (
+                        <p style={{ color: "green", fontWeight: "bold" }}>
+                            🎉 Spin Reward Applied: -₹{spinDiscount.toFixed(2)}
+                        </p>
+                    )}
+
+                    <ul className="ul">
                         {orderData.map(item => (
                             <li key={item.id}>
-                                {item.book.title} — ₹{item.book.price.toFixed(2)} × {item.quantity} = ₹{(item.book.price * item.quantity).toFixed(2)}
+                                {item.book.title} — ₹{item.book.price.toFixed(2)} × {item.quantity}
+                                = ₹{(item.book.price * item.quantity).toFixed(2)}
                             </li>
                         ))}
                     </ul>
 
-                    {quizDiscount && (
-                        <p style={{ color: 'green' }}>
-                            🎉 You earned ₹{quizDiscount.discount} from the Monthly Book Quiz!
-                        </p>
-                    )}
-
-                    {!quizDiscount && activeSale && (
-                        <p style={{ color: 'green' }}>
-                            🥳 <strong>{activeSale.title}</strong> is active. You get {activeSale.discountPercentage}% off!
-                        </p>
-                    )}
-
-                    {!quizDiscount && !activeSale && (
+                    {/* COUPON */}
+                    <h3>Apply Coupon</h3>
+                    {spinApplied ? (
+                        <p style={{ color: "red" }}>Coupons disabled because Spin Reward is applied.</p>
+                    ) : (
                         <>
-                            <h3>Apply Coupon</h3>
                             {availableCoupons.length === 0 ? (
-                                <p>No available coupons.</p>
+                                <p>No coupons available</p>
                             ) : (
-                                <>
-                                    {availableCoupons.map(coupon => {
-                                        const usesLeft = coupon.stock?.totalQuantity
-                                            ? coupon.stock.totalQuantity - (coupon.stock.usedCount || 0)
-                                            : null;
-
-                                        return (
-                                            <label key={coupon.code}>
-                                                <input
-                                                    type="radio"
-                                                    name="coupon"
-                                                    value={coupon.code}
-                                                    checked={couponCode === coupon.code}
-                                                    onChange={(e) => setCouponCode(e.target.value)}
-                                                />
-                                                <strong>{coupon.code}</strong> —
-                                                {coupon.discountPercentage
-                                                    ? `${coupon.discountPercentage}% off`
-                                                    : `₹${coupon.discountAmount} off`}
-                                                {coupon.minimumOrderAmount > 0 &&
-                                                    ` (Min. order ₹${coupon.minimumOrderAmount})`}
-                                                {coupon.assignedToEmail && <span style={{ color: 'purple' }}> (Personal)</span>}
-                                                {usesLeft !== null && (
-                                                    <span style={{ color: 'gray' }}> — {usesLeft} use{usesLeft === 1 ? '' : 's'} left</span>
-                                                )}
-                                                <br />
-                                            </label>
-                                        );
-                                    })}
-                                    <br />
-                                    <button
-                                        className='apply'
-                                        onClick={applyCoupon}
-                                        disabled={!couponCode}
-                                    >
-                                        Apply Selected Coupon
-                                    </button>
-                                    {couponError && <p style={{ color: 'red' }}>{couponError}</p>}
-                                    {appliedDiscount > 0 && (
-                                        <p style={{ color: 'green' }}>
-                                            You saved ₹{appliedDiscount.toFixed(2)}
-                                        </p>
-                                    )}
-                                </>
+                                availableCoupons.map(coupon => (
+                                    <label key={coupon.code}>
+                                        <input
+                                            type="radio"
+                                            name="coupon"
+                                            value={coupon.code}
+                                            checked={couponCode === coupon.code}
+                                            onChange={(e) => setCouponCode(e.target.value)}
+                                        />
+                                        <strong>{coupon.code}</strong> —
+                                        {coupon.discountPercentage
+                                            ? `${coupon.discountPercentage}% off`
+                                            : `₹${coupon.discountAmount} off`}
+                                        <br />
+                                    </label>
+                                ))
                             )}
+
+                            <button className="apply" onClick={applyCoupon} disabled={!couponCode}>
+                                Apply Selected Coupon
+                            </button>
+                            {couponError && <p style={{ color: "red" }}>{couponError}</p>}
                         </>
                     )}
 
                     <h3>Tip Amount</h3>
                     <input
                         type="number"
-                        name="tip"
-                        placeholder="Tip Amount"
+                        min="0"
                         value={tip}
                         onChange={(e) => setTip(e.target.value)}
-                        min="0"
                     />
 
                     <h3>Payment Method</h3>
@@ -431,18 +496,18 @@ export default function CheckoutPage() {
                         <option value="Card">Card</option>
                     </select>
 
-                    <div className='totaling'>
+                    <div className="totaling">
                         <p><strong>Subtotal:</strong> ₹{subtotal.toFixed(2)}</p>
                         <p><strong>Discount:</strong> ₹{discount.toFixed(2)}</p>
                         <p><strong>Tip:</strong> ₹{tipAmount.toFixed(2)}</p>
                         {shippingCharge > 0 && (
                             <p><strong>Shipping Charges:</strong> ₹{shippingCharge.toFixed(2)}</p>
                         )}
-                        <h4 className='ex'>Total: ₹{total.toFixed(2)}</h4>
+                        <h4 className="ex">Total: ₹{total.toFixed(2)}</h4>
                     </div>
 
                     <div className="button-row">
-                        <button className="backbtn" onClick={handleBack}>Back</button>
+                        <button className="backbtn" onClick={() => setStep(1)}>Back</button>
                         <button className="place-btn" onClick={handlePlaceOrder}>Place Order</button>
                     </div>
                 </div>
