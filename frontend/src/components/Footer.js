@@ -20,7 +20,7 @@ export default function Footer() {
           const data = await response.json();
           setContactInfo({
             address: data.address || '123 Main Street, City, Country',
-            email: data.email || 'contact@chapter4.com',
+            email:'contact@chapter4.com',
             phone: data.phone || '+123 456 7890'
           });
         }
