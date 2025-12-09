@@ -20,7 +20,7 @@ export default function Footer() {
           const data = await response.json();
           setContactInfo({
             address: data.address || '123 Main Street, City, Country',
-            email: data.email || 'contact@bookstore.com',
+            email: data.email || 'contact@chapter4.com',
             phone: data.phone || '+123 456 7890'
           });
         }
@@ -29,7 +29,7 @@ export default function Footer() {
         // Fallback to default values
         setContactInfo({
           address: '123 Main Street, City, Country',
-          email: 'contact@bookstore.com',
+          email: 'contact@chapter4.com',
           phone: '+123 456 7890'
         });
       } finally {
@@ -53,7 +53,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>BookStore Inc.</p>
+        <p>Chapter4 Inc.</p>
         <p>{contactInfo.address}</p>
         <p>Email: {contactInfo.email} | Phone: {contactInfo.phone}</p>
 
@@ -72,7 +72,7 @@ export default function Footer() {
           )}
         </div>
 
-        <p>&copy; {new Date().getFullYear()} BookStore. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Chapter4. All rights reserved.</p>
       </div>
     </footer>
   );
