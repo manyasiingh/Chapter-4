@@ -60,14 +60,19 @@ export default function BookCard({ book }) {
   return (
     <div className="book-card">
       <div onClick={() => navigate(`/book/${book.id}`)} className='cur'>
-        <img
-          src={
-            book.coverImageUrl?.startsWith('http')
-              ? book.coverImageUrl
-              : `/${book.coverImageUrl}`
-          }
-          alt={book.title}
-          className="book-image"
+        <img src={
+    book.coverImageUrl?.startsWith('http')
+      ? book.coverImageUrl
+      : book.coverImageUrl?.startsWith('/')
+        ? book.coverImageUrl
+        : `/images/${book.coverImageUrl || 'default-book.jpg'}`
+  }
+  alt={book.title}
+  className="book-image"
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = '/images/default-book.jpg';
+  }}
         />
         <h3>{book.title}</h3>
         <h4>{book.author}</h4>
