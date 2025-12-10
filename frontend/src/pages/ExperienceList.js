@@ -8,7 +8,7 @@ export default function ExperienceList() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/experiences')
+        fetch('/api/experiences')
             .then(res => res.json())
             .then(data => setExperiences(data))
             .catch(error => console.error('Error fetching experiences:', error));

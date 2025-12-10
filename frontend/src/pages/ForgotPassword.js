@@ -30,7 +30,7 @@ export default function ForgotPassword() {
     }
 
     try {
-      const res = await fetch(`https://localhost:5001/api/users/reset-password`, {
+      const res = await fetch(`/api/users/reset-password`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, newPassword })

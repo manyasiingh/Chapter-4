@@ -13,7 +13,7 @@ export default function Profile() {
 
     const fetchUser = useCallback(async () => {
         try {
-            const res = await fetch(`https://localhost:5001/api/users/email/${email}`);
+            const res = await fetch(`/api/users/email/${email}`);
             if (res.ok) {
                 const data = await res.json();
                 setUser(data);
@@ -28,7 +28,7 @@ export default function Profile() {
         if (!email) return;
         const fetchWishlist = async () => {
             try {
-                const res = await fetch(`https://localhost:5001/api/wishlist/user/${email}`);
+                const res = await fetch(`/api/wishlist/user/${email}`);
                 if (res.ok) {
                     const data = await res.json();
                     setWishlist(data);
@@ -60,7 +60,7 @@ export default function Profile() {
         if (!confirm) return;
 
         try {
-            const res = await fetch(`https://localhost:5001/api/users/${user.id}`, {
+            const res = await fetch(`/api/users/${user.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formUser),
@@ -90,7 +90,7 @@ export default function Profile() {
         if (!confirm) return;
 
         try {
-            const res = await fetch(`https://localhost:5001/api/users/${user.id}/profile-image`, {
+            const res = await fetch(`/api/users/${user.id}/profile-image`, {
                 method: 'DELETE',
             });
 
@@ -116,7 +116,7 @@ export default function Profile() {
         setUploading(true);
 
         try {
-            const res = await fetch(`https://localhost:5001/api/users/${user.id}/upload-profile-image`, {
+            const res = await fetch(`/api/users/${user.id}/upload-profile-image`, {
                 method: 'POST',
                 body: formData,
             });
@@ -148,7 +148,7 @@ export default function Profile() {
                             src={
                                 user.profileImageUrl.startsWith('http')
                                     ? user.profileImageUrl
-                                    : `https://localhost:5001/${user.profileImageUrl}`
+                                    : `/${user.profileImageUrl}`
                             }
                             alt="Profile"
                             className="profile-image"

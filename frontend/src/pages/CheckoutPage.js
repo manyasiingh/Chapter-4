@@ -59,7 +59,7 @@ export default function CheckoutPage() {
     async function fetchDiscounts() {
       try {
         // QUIZ
-        const quizRes = await fetch(`https://localhost:5001/api/monthlyquiz/reward/${encodeURIComponent(email)}`);
+        const quizRes = await fetch(`/api/monthlyquiz/reward/${encodeURIComponent(email)}`);
         const quizData = quizRes.ok ? await safeJson(quizRes) : null;
 
         if (quizData && quizData.hasReward && quizData.discount > 0 && subtotal >= 150) {
@@ -68,7 +68,7 @@ export default function CheckoutPage() {
         }
 
         // SALE
-        const saleRes = await fetch(`https://localhost:5001/api/saleevent/active`);
+        const saleRes = await fetch(`/api/saleevent/active`);
         const saleData = saleRes.ok ? (await safeJson(saleRes) || []) : [];
         if (saleData.length > 0) {
           const bestSale = saleData.reduce((a, b) =>
@@ -78,12 +78,12 @@ export default function CheckoutPage() {
         }
 
         // COUPONS
-        const couponRes = await fetch(`https://localhost:5001/api/coupons/my-valid/${encodeURIComponent(email)}`);
+        const couponRes = await fetch(`/api/coupons/my-valid/${encodeURIComponent(email)}`);
         const validCoupons = couponRes.ok ? (await safeJson(couponRes) || []) : [];
         setAvailableCoupons(validCoupons);
 
         // SPIN
-        const spinRes = await fetch(`https://localhost:5001/api/spin/unused/${encodeURIComponent(email)}`);
+        const spinRes = await fetch(`/api/spin/unused/${encodeURIComponent(email)}`);
         const spinData = spinRes.ok ? await safeJson(spinRes) : null;
 
         if (spinData && spinData.rewardValue) {
@@ -105,7 +105,7 @@ export default function CheckoutPage() {
     async function loadAddresses() {
       try {
         const res = await fetch(
-          `https://localhost:5001/api/addresses/user/${encodeURIComponent(email)}`
+          `/api/addresses/user/${encodeURIComponent(email)}`
         );
 
         const data = res.ok ? await safeJson(res) : [];
@@ -228,7 +228,7 @@ export default function CheckoutPage() {
 
     try {
       const res = await fetch(
-        `https://localhost:5001/api/coupons/apply?code=${encodeURIComponent(couponCode)}&totalAmount=${subtotal}&email=${encodeURIComponent(email)}`
+        `/api/coupons/apply?code=${encodeURIComponent(couponCode)}&totalAmount=${subtotal}&email=${encodeURIComponent(email)}`
       );
 
       const data = await safeJson(res);
@@ -263,7 +263,7 @@ const startOnlinePayment = async () => {
     const amountToPay = Number(total.toFixed(2));
     console.log('Starting payment with amount:', amountToPay, 'for email:', email);
 
-    const res = await fetch('https://localhost:5001/api/payment/create', {
+    const res = await fetch('/api/payment/create', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -324,7 +324,7 @@ const startOnlinePayment = async () => {
     }
 
     try {
-      const verifyRes = await fetch('https://localhost:5001/api/payment/verify', {
+      const verifyRes = await fetch('/api/payment/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -354,7 +354,7 @@ const startOnlinePayment = async () => {
   const finalizeOrderAfterPayment = async () => {
     if (selectedAddressId === 'new') {
       try {
-        const addressRes = await fetch('https://localhost:5001/api/addresses', {
+        const addressRes = await fetch('/api/addresses', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, ...address })
@@ -392,7 +392,7 @@ const startOnlinePayment = async () => {
     }
 
     try {
-      const orderRes = await fetch('https://localhost:5001/api/orders', {
+      const orderRes = await fetch('/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderPayload),
@@ -407,7 +407,7 @@ const startOnlinePayment = async () => {
       // Mark spin used
       if (spinApplied && spinReward) {
         try {
-          await fetch(`https://localhost:5001/api/spin/mark-used/${spinReward.id}`, { method: "POST" });
+          await fetch(`/api/spin/mark-used/${spinReward.id}`, { method: "POST" });
         } catch (err) {
           console.error('Failed to mark spin used:', err);
         }
@@ -416,7 +416,7 @@ const startOnlinePayment = async () => {
       // Consume quiz
       if (quizDiscount) {
         try {
-          await fetch(`https://localhost:5001/api/monthlyquiz/consume-reward/${encodeURIComponent(email)}`, {
+          await fetch(`/api/monthlyquiz/consume-reward/${encodeURIComponent(email)}`, {
             method: 'POST'
           });
         } catch (err) {
@@ -428,7 +428,7 @@ const startOnlinePayment = async () => {
       try {
         localStorage.removeItem('orderData');
         window.dispatchEvent(new Event('clearLocalCart'));
-        await fetch(`https://localhost:5001/api/cartitems/clear/${encodeURIComponent(email)}`, { method: 'DELETE' });
+        await fetch(`/api/cartitems/clear/${encodeURIComponent(email)}`, { method: 'DELETE' });
       } catch (err) {
         console.error('Failed to clear cart:', err);
       }
@@ -458,7 +458,7 @@ const startOnlinePayment = async () => {
   const handlePlaceOrder = async () => {
     if (selectedAddressId === 'new') {
       try {
-        const addressRes = await fetch('https://localhost:5001/api/addresses', {
+        const addressRes = await fetch('/api/addresses', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, ...address })

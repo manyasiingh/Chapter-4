@@ -14,7 +14,7 @@ export default function Home() {
   const [recentBooks, setRecentBooks] = useState([]);
 
   useEffect(() => {
-    fetch('https://localhost:5001/api/books/trending')
+    fetch('/api/books/trending')
       .then(res => res.json())
       .then(data => setTrending(data))
       .catch(err => console.error('Error fetching trending books:', err));
@@ -24,7 +24,7 @@ export default function Home() {
     const email = localStorage.getItem('email');
     if (!email) return;
 
-    fetch(`https://localhost:5001/api/RecentView/${email}`)
+    fetch(`/api/RecentView/${email}`)
       .then(res => res.json())
       .then(data => setRecentBooks(data))
       .catch(err => console.error('Error loading recent views:', err));

@@ -14,7 +14,7 @@
 //         }
 
 //         try {
-//             const res = await fetch(`https://localhost:5001/api/coupons/apply?code=${code.trim()}&totalAmount=${totalAmount}&email=${email}`);
+//             const res = await fetch(`/api/coupons/apply?code=${code.trim()}&totalAmount=${totalAmount}&email=${email}`);
 //             const text = await res.text();
 
 //             let data;

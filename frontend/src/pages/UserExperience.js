@@ -25,7 +25,7 @@ export default function UserExperience() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const res = await fetch('https://localhost:5001/api/experiences', {
+        const res = await fetch('/api/experiences', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form)

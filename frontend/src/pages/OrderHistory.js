@@ -23,7 +23,7 @@ export default function OrderHistory() {
         if (!email) return;
 
         try {
-            const response = await fetch(`https://localhost:5001/api/orders/user/${encodeURIComponent(email)}`);
+            const response = await fetch(`/api/orders/user/${encodeURIComponent(email)}`);
             if (!response.ok) {
                 console.error(`Failed to fetch orders. Status: ${response.status}`);
                 return;
@@ -56,7 +56,7 @@ export default function OrderHistory() {
         if (!confirmed) return;
 
         try {
-            const response = await fetch(`https://localhost:5001/api/orders/cancel/${orderId}`, {
+            const response = await fetch(`/api/orders/cancel/${orderId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(email)
@@ -81,7 +81,7 @@ export default function OrderHistory() {
             alert("Please select or enter a return reason.");
             return;
         }
-        const res = await fetch(`https://localhost:5001/api/orders/return/${orderId}`, {
+        const res = await fetch(`/api/orders/return/${orderId}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(reasonToSend)

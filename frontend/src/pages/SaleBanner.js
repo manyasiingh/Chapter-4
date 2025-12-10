@@ -7,7 +7,7 @@ export default function SaleBanner() {
   useEffect(() => {
     const fetchSale = async () => {
       try {
-        const res = await fetch('https://localhost:5001/api/saleevent/active');
+        const res = await fetch('/api/saleevent/active');
         if (res.ok) {
           const data = await res.json();
           setSales(data); 

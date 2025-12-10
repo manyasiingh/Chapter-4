@@ -5,7 +5,7 @@ export default function About() {
   const [content, setContent] = useState({});
 
   useEffect(() => {
-    fetch('https://localhost:5001/api/aboutcontent')
+    fetch('/api/aboutcontent')
       .then(res => res.json())
       .then(data => {
         const sectionData = {};

@@ -17,7 +17,7 @@ export default function Books() {
   const [priceRange, setPriceRange] = useState([0, 100]);
 
   useEffect(() => {
-    fetch('https://localhost:5001/api/books')
+    fetch('/api/books')
       .then(res => res.json())
       .then(data => {
         setBooks(data);

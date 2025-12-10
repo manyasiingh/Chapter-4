@@ -26,7 +26,7 @@ export default function Contact() {
     // Fetch contact info from API
     const fetchContactInfo = async () => {
       try {
-        const res = await fetch('https://localhost:5001/api/contactinfo');
+        const res = await fetch('/api/contactinfo');
         if (res.ok) {
           const data = await res.json();
           setContactInfo(data);
@@ -61,7 +61,7 @@ export default function Contact() {
     }
 
     try {
-      const res = await fetch('https://localhost:5001/api/contactqueries', {
+      const res = await fetch('/api/contactqueries', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -82,7 +82,7 @@ export default function Contact() {
   const fetchUserQueries = async () => {
     if (!email) return;
     try {
-      const res = await fetch(`https://localhost:5001/api/contactqueries/user/${email}`);
+      const res = await fetch(`/api/contactqueries/user/${email}`);
       if (res.ok) {
         const data = await res.json();
         setUserQueries(data);

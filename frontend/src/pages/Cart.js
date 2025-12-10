@@ -13,7 +13,7 @@ export default function Cart() {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const res = await fetch(`https://localhost:5001/api/cartitems/${email}`);
+        const res = await fetch(`/api/cartitems/${email}`);
         if (res.ok) {
           const data = await res.json();
           setCartItems(data);
@@ -40,7 +40,7 @@ export default function Cart() {
   const updateQuantity = async (id, quantity) => {
     if (quantity < 1) return;
     try {
-      const res = await fetch(`https://localhost:5001/api/cartitems/${id}`, {
+      const res = await fetch(`/api/cartitems/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ quantity }),
@@ -58,7 +58,7 @@ export default function Cart() {
 
   const removeItem = async (id) => {
     try {
-      const res = await fetch(`https://localhost:5001/api/cartitems/${id}`, {
+      const res = await fetch(`/api/cartitems/${id}`, {
         method: 'DELETE',
       });
 

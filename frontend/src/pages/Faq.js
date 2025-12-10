@@ -46,7 +46,7 @@ export default function Faq() {
     const storedEmail = localStorage.getItem('email');
     if (storedEmail) setEmail(storedEmail);
 
-    fetch('https://localhost:5001/api/faq/all')
+    fetch('/api/faq/all')
       .then(res => res.json())
       .then(data => setUserQuestions(data))
       .catch(err => console.error('Error fetching user FAQs:', err));
@@ -79,7 +79,7 @@ export default function Faq() {
       return;
     }
 
-    fetch('https://localhost:5001/api/faq/ask', {
+    fetch('/api/faq/ask', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, questionText: userQuestion }),
@@ -101,7 +101,7 @@ export default function Faq() {
     }
 
     try {
-      const res = await fetch(`https://localhost:5001/api/faq/${questionId}/vote`, {
+      const res = await fetch(`/api/faq/${questionId}/vote`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(isHelpful),

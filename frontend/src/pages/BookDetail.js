@@ -18,7 +18,7 @@ export default function BookDetail() {
   useEffect(() => {
     async function fetchBook() {
       try {
-        const res = await fetch(`https://localhost:5001/api/books/${id}`);
+        const res = await fetch(`/api/books/${id}`);
         if (res.ok) {
           const data = await res.json();
           setBook(data);
@@ -37,7 +37,7 @@ export default function BookDetail() {
     const email = localStorage.getItem('email');
     if (!email || !book || hasLoggedView.current) return;
 
-    axios.post('https://localhost:5001/api/RecentView', {
+    axios.post('/api/RecentView', {
       email,
       bookId: book.id
     }).catch(err => console.error('Failed to save recent view:', err));
@@ -68,7 +68,7 @@ export default function BookDetail() {
           src={
             book.coverImageUrl.startsWith('http')
               ? book.coverImageUrl
-              : `https://localhost:5001/${book.coverImageUrl}`
+              : `/${book.coverImageUrl}`
           }
           alt={book.title}
         />
