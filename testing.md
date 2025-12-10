@@ -266,7 +266,7 @@ Final validation by stakeholders.
 | GET | /api/books | Get all books |
 | POST | /api/books | Add new book (admin) |
 
-**![][image1]**
+**![image](images/image1.png)**
 
 **Orders APIs**
 
@@ -275,7 +275,7 @@ Final validation by stakeholders.
 | GET | /api/orders | Place order |
 | POST | /api/orders/user/{email} | User order list |
 
-**![][image2]**
+**![image](images/image2.png)**
 
 **Spin & win APIs**
 
@@ -285,7 +285,7 @@ Final validation by stakeholders.
 | GET | /api/spin-options | Admin: get spin options |
 | POST | /api/spin-options | Admin: add spin option |
 
-**![][image3]**
+**![image](images/image3.png)**
 
 **Coupons APIs**
 
@@ -293,9 +293,10 @@ Final validation by stakeholders.
 | :---- | :---- | :---- |
 | GET | /api/coupons | Get all coupons |
 
-![][image4]
+**![image](images/image4.png)**
 
 ## **SUMMARY**
 
 This testing document ensures that Chapter 4 meets its functional, usability, security, and performance requirements before moving to production.
+
 
