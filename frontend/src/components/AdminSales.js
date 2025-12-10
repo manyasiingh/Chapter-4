@@ -12,7 +12,7 @@ export default function AdminSales() {
     }, []);
 
     const fetchSales = async () => {
-        const res = await fetch("https://localhost:5001/api/saleevent");
+        const res = await fetch("/api/saleevent");
         if (!res.ok) return console.error("Failed to fetch sales");
 
         const text = await res.text();
@@ -22,7 +22,7 @@ export default function AdminSales() {
 
     const handleDelete = async (id) => {
         if (!window.confirm('Are you sure?')) return;
-        await fetch(`https://localhost:5001/api/saleevent/${id}`, { method: 'DELETE' });
+        await fetch(`/api/saleevent/${id}`, { method: 'DELETE' });
         fetchSales();
     };
 

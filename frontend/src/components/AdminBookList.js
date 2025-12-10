@@ -25,7 +25,7 @@ export default function AdminBookList() {
 
   const fetchBooks = async () => {
     try {
-      const res = await fetch('https://localhost:5001/api/books');
+      const res = await fetch('/api/books');
       const data = await res.json();
       setBooks(data);
     } catch (err) {
@@ -43,7 +43,7 @@ export default function AdminBookList() {
     if (!window.confirm("Are you sure you want to delete this book?")) return;
 
     try {
-      const res = await fetch(`https://localhost:5001/api/books/${id}`, {
+      const res = await fetch(`/api/books/${id}`, {
         method: 'DELETE'
       });
 
@@ -102,7 +102,7 @@ export default function AdminBookList() {
                       <img
                         src={book.coverImageUrl?.startsWith('http')
                           ? book.coverImageUrl
-                          : `https://localhost:5001/${book.coverImageUrl}`}
+                          : `/${book.coverImageUrl}`}
                         alt={book.title}
                         className="book-thumb"
                       />

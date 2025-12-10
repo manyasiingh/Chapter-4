@@ -22,7 +22,7 @@ export default function BookSearchBar() {
 
       try {
         const res = await fetch(
-          `https://localhost:5001/api/books/search?query=${query}&filter=${filter}`
+          `/api/books/search?query=${query}&filter=${filter}`
         );
 
         if (res.ok) {
@@ -57,7 +57,7 @@ export default function BookSearchBar() {
     formData.append("image", file);
 
     try {
-      const res = await fetch("https://localhost:5001/api/books/search-by-image", {
+      const res = await fetch("/api/books/search-by-image", {
         method: "POST",
         body: formData
       });

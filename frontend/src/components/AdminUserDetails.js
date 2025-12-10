@@ -13,13 +13,13 @@ export default function AdminUserDetails() {
     const [status, setStatus] = useState('');
 
     useEffect(() => {
-        fetch(`https://localhost:5001/api/users/${id}`)
+        fetch(`/api/users/${id}`)
             .then(res => res.json())
             .then(data => {
                 setUser(data);
                 setOriginalUser(data);
                 if (data.profileImageUrl) {
-                    setPreview(`https://localhost:5001${data.profileImageUrl}`);
+                    setPreview(`${data.profileImageUrl}`);
                 }
             });
     }, [id]);
@@ -53,7 +53,7 @@ export default function AdminUserDetails() {
         setStatus('');
 
         try {
-            const res = await fetch(`https://localhost:5001/api/users/${id}`, {
+            const res = await fetch(`/api/users/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(user)
@@ -65,7 +65,7 @@ export default function AdminUserDetails() {
                     const formData = new FormData();
                     formData.append('file', selectedFile);
 
-                    const uploadRes = await fetch(`https://localhost:5001/api/users/${id}/upload-profile-image`, {
+                    const uploadRes = await fetch(`/api/users/${id}/upload-profile-image`, {
                         method: 'POST',
                         body: formData
                     });
@@ -73,7 +73,7 @@ export default function AdminUserDetails() {
                     if (uploadRes.ok) {
                         const data = await uploadRes.json();
                         setUser(prev => ({ ...prev, profileImageUrl: data.imageUrl }));
-                        setPreview(`https://localhost:5001${data.imageUrl}`);
+                        setPreview(`${data.imageUrl}`);
                         alert('Profile image uploaded');
                     } else {
                         alert('User updated, but image upload failed');
@@ -97,7 +97,7 @@ export default function AdminUserDetails() {
         setUser(originalUser);
         setSelectedFile(null);
         setPreview(originalUser?.profileImageUrl
-            ? `https://localhost:5001${originalUser.profileImageUrl}`
+            ? `${originalUser.profileImageUrl}`
             : ''
         );
         navigate('/admin/users');

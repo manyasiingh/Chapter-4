@@ -10,7 +10,7 @@ export default function AdminQuizAttempts() {
   const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/monthlyquiz/all')
+        fetch('/api/monthlyquiz/all')
             .then(res => res.json())
             .then(data => {
                 setAttempts(data);

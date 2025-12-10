@@ -14,7 +14,7 @@ export default function AdminContactInfo() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/contactinfo')
+        fetch('/api/contactinfo')
             .then(res => {
                 if (!res.ok) throw new Error('Failed to fetch');
                 return res.json();
@@ -55,8 +55,8 @@ export default function AdminContactInfo() {
         try {
             const method = info.id ? 'PUT' : 'POST';
             const url = info.id 
-                ? `https://localhost:5001/api/contactinfo/${info.id}`
-                : 'https://localhost:5001/api/contactinfo';
+                ? `/api/contactinfo/${info.id}`
+                : '/api/contactinfo';
 
             const res = await fetch(url, {
                 method,

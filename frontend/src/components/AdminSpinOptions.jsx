@@ -19,7 +19,7 @@ export default function AdminSpinOptions() {
     }, []);
 
     const loadOptions = async () => {
-        const res = await fetch("https://localhost:5001/api/spin-options");
+        const res = await fetch("/api/spin-options");
         const data = await res.json();
         setOptions(data);
     };
@@ -35,13 +35,13 @@ export default function AdminSpinOptions() {
         }
 
         if (editingId) {
-            await fetch(`https://localhost:5001/api/spin-options/${editingId}`, {
+            await fetch(`/api/spin-options/${editingId}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),
             });
         } else {
-            await fetch("https://localhost:5001/api/spin-options", {
+            await fetch("/api/spin-options", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),
@@ -66,7 +66,7 @@ export default function AdminSpinOptions() {
     const deleteOption = async (id) => {
         if (!window.confirm("Delete this option?")) return;
 
-        await fetch(`https://localhost:5001/api/spin-options/${id}`, {
+        await fetch(`/api/spin-options/${id}`, {
             method: "DELETE",
         });
 

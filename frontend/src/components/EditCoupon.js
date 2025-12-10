@@ -25,7 +25,7 @@ export default function EditCoupon() {
     useEffect(() => {
         const fetchCoupon = async () => {
             try {
-                const response = await fetch(`https://localhost:5001/api/coupons/${id}`);
+                const response = await fetch(`/api/coupons/${id}`);
                 if (!response.ok) throw new Error('Failed to fetch coupon');
                 const data = await response.json();
 
@@ -102,7 +102,7 @@ export default function EditCoupon() {
         };
 
         try {
-            const response = await fetch(`https://localhost:5001/api/coupons/${id}`, {
+            const response = await fetch(`/api/coupons/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),

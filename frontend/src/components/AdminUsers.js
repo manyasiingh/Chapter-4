@@ -8,14 +8,14 @@ export default function AdminUsers() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/users/all')
+        fetch('/api/users/all')
             .then(res => res.json())
             .then(data => setUsers(data));
     }, []);
 
     const handleDelete = async (id) => {
         if (!window.confirm('Delete this user?')) return;
-        const res = await fetch(`https://localhost:5001/api/users/${id}`, { method: 'DELETE' });
+        const res = await fetch(`/api/users/${id}`, { method: 'DELETE' });
         if (res.ok) {
             alert('User deleted');
             setUsers(prev => prev.filter(user => user.id !== id)); // update UI
@@ -59,7 +59,7 @@ export default function AdminUsers() {
                                     <img
                                         src={user.profileImageUrl?.startsWith('http')
                                             ? user.profileImageUrl
-                                            : `https://localhost:5001/${user.profileImageUrl}`}
+                                            : `/${user.profileImageUrl}`}
                                         alt={user.firstName}
                                     // className="book-thumb"
                                     />

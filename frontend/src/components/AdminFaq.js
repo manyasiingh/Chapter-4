@@ -13,7 +13,7 @@ export default function AdminFaq() {
     }, []);
 
     const refreshQuestions = async () => {
-        const updated = await fetch('https://localhost:5001/api/faq/all').then(res => res.json());
+        const updated = await fetch('/api/faq/all').then(res => res.json());
         setQuestions(updated);
     };
 
@@ -25,7 +25,7 @@ export default function AdminFaq() {
         const answer = answers[id];
         if (!answer) return alert("Answer cannot be empty");
 
-        const res = await fetch(`https://localhost:5001/api/faq/${id}/answer`, {
+        const res = await fetch(`/api/faq/${id}/answer`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(answer)
@@ -46,7 +46,7 @@ export default function AdminFaq() {
             : "Are you sure you want to delete this unanswered question?";
         if (!window.confirm(confirmMsg)) return;
 
-        const res = await fetch(`https://localhost:5001/api/faq/${id}`, {
+        const res = await fetch(`/api/faq/${id}`, {
             method: 'DELETE'
         });
 

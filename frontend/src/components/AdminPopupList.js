@@ -8,14 +8,14 @@ export default function AdminPopupList() {
   const navigate = useNavigate();
 
   const fetchSettings = async () => {
-    const res = await fetch('https://localhost:5001/api/PopupSettings');
+    const res = await fetch('/api/PopupSettings');
     const data = await res.json();
     setSettingsList(Array.isArray(data) ? data : [data]); // in case it's a single object
   };
 
   const deleteSetting = async (id) => {
     if (!window.confirm('Are you sure you want to delete this popup setting?')) return;
-    await fetch(`https://localhost:5001/api/PopupSettings/${id}`, {
+    await fetch(`/api/PopupSettings/${id}`, {
       method: 'DELETE'
     });
     fetchSettings();

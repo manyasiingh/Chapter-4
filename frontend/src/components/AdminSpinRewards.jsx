@@ -13,7 +13,7 @@ export default function AdminSpinRewards() {
 
     const fetchAllRewards = async () => {
         try {
-            const res = await fetch("https://localhost:5001/api/spin/all");
+            const res = await fetch("/api/spin/all");
             const data = await res.json();
             
             // Always sort by ID in ascending order

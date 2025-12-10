@@ -17,7 +17,7 @@ export default function SaleForm() {
 
     useEffect(() => {
         if (id) {
-            fetch(`https://localhost:5001/api/saleevent/${id}`)
+            fetch(`/api/saleevent/${id}`)
                 .then(res => {
                     if (!res.ok) throw new Error("Sale not found");
                     return res.json();
@@ -50,8 +50,8 @@ export default function SaleForm() {
 
         const method = id ? 'PUT' : 'POST';
         const url = id
-            ? `https://localhost:5001/api/saleevent/${id}`
-            : 'https://localhost:5001/api/saleevent';
+            ? `/api/saleevent/${id}`
+            : '/api/saleevent';
 
         const res = await fetch(url, {
             method,

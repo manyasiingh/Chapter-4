@@ -14,7 +14,7 @@ export default function AdminExperiences() {
 
     const fetchExperiences = async () => {
         try {
-            const res = await axios.get('https://localhost:5001/api/Experiences');
+            const res = await axios.get('/api/Experiences');
             const sorted = res.data.sort((a, b) => a.id - b.id);
             setExperiences(sorted);
         } catch (error) {
@@ -26,7 +26,7 @@ export default function AdminExperiences() {
         if (!window.confirm("Are you sure you want to delete this experience?")) return;
 
         try {
-            await axios.delete(`https://localhost:5001/api/admin/${id}`);
+            await axios.delete(`/api/admin/${id}`);
             setExperiences(prev => prev.filter(exp => exp.id !== id));
         } catch (error) {
             console.error('Error deleting experience', error);

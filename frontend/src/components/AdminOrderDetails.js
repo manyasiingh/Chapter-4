@@ -13,7 +13,7 @@ export default function AdminOrderDetails() {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        fetch(`https://localhost:5001/api/orders/${id}`)
+        fetch(`/api/orders/${id}`)
             .then(async res => {
                 const text = await res.text();
                 if (!res.ok) {
@@ -47,7 +47,7 @@ export default function AdminOrderDetails() {
             };
 
 
-            const res = await fetch(`https://localhost:5001/api/orders/admin/orders/${id}/status`, {
+            const res = await fetch(`/api/orders/admin/orders/${id}/status`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)

@@ -8,7 +8,7 @@ export default function SalesReport() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/admin/sales-report')
+        fetch('/api/admin/sales-report')
             .then(res => {
                 if (!res.ok) {
                     throw new Error("Failed to fetch sales report");

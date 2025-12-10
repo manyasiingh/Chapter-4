@@ -15,7 +15,7 @@ export default function Review({ bookId }) {
 
   useEffect(() => {
     if (showReviews && bookId) {
-      fetch(`https://localhost:5001/api/reviews/book/${bookId}`)
+      fetch(`/api/reviews/book/${bookId}`)
         .then(res => res.json())
         .then(setReviews)
         .catch(err => console.error("Error fetching reviews:", err));
@@ -29,7 +29,7 @@ export default function Review({ bookId }) {
     }
 
     try {
-      const res = await fetch(`https://localhost:5001/api/reviews/${reviewId}/vote`, {
+      const res = await fetch(`/api/reviews/${reviewId}/vote`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(isHelpful),
@@ -65,7 +65,7 @@ export default function Review({ bookId }) {
     }
 
     try {
-      const res = await fetch('https://localhost:5001/api/reviews', {
+      const res = await fetch('/api/reviews', {
         method: 'POST',
         body: formData,
       });
@@ -115,7 +115,7 @@ export default function Review({ bookId }) {
                   {r.imageUrl && (
                     <div className="review-image-wrapper">
                       <img
-                        src={`https://localhost:5001/${r.imageUrl}`}
+                        src={`/${r.imageUrl}`}
                         alt="Review"
                         className="review-image"
                       />

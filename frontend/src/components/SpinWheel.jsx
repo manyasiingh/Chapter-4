@@ -31,7 +31,7 @@ export default function SpinWheel({ userEmail }) {
     // ------------ GET ADMIN OPTIONS ------------
     const loadOptions = async () => {
         try {
-            const res = await fetch("https://localhost:5001/api/spin-options");
+            const res = await fetch("/api/spin-options");
             const data = await safeJSON(res);
 
             if (Array.isArray(data)) {
@@ -50,7 +50,7 @@ export default function SpinWheel({ userEmail }) {
     const checkServerReward = async () => {
         try {
             const res = await fetch(
-                `https://localhost:5001/api/spin/unused/${encodeURIComponent(email)}`
+                `/api/spin/unused/${encodeURIComponent(email)}`
             );
             if (!res.ok) return null;
             return await safeJSON(res);
@@ -159,7 +159,7 @@ export default function SpinWheel({ userEmail }) {
 
         try {
             const res = await fetch(
-                `https://localhost:5001/api/spin/spin/${encodeURIComponent(email)}`,
+                `/api/spin/spin/${encodeURIComponent(email)}`,
                 { method: "POST" }
             );
             if (res.ok) data = await safeJSON(res);

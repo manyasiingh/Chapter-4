@@ -31,7 +31,7 @@ export default function AdminAddEditBook() {
 
     useEffect(() => {
         if (id) {
-            fetch(`https://localhost:5001/api/books/${id}`)
+            fetch(`/api/books/${id}`)
                 .then(res => res.json())
                 .then(data => {
                     const filledData = {
@@ -57,7 +57,7 @@ export default function AdminAddEditBook() {
                         filledData.coverImageUrl
                             ? filledData.coverImageUrl.startsWith('http')
                                 ? filledData.coverImageUrl
-                                : `https://localhost:5001/${filledData.coverImageUrl}`
+                                : `/${filledData.coverImageUrl}`
                             : ''
                     );
                 })
@@ -74,8 +74,8 @@ export default function AdminAddEditBook() {
         e.preventDefault();
         const method = id ? 'PUT' : 'POST';
         const url = id
-            ? `https://localhost:5001/api/books/${id}`
-            : 'https://localhost:5001/api/books';
+            ? `/api/books/${id}`
+            : '/api/books';
 
         const formData = new FormData();
         formData.append('Id', id || 0);
@@ -130,7 +130,7 @@ export default function AdminAddEditBook() {
                 originalForm.coverImageUrl
                     ? originalForm.coverImageUrl.startsWith('http')
                         ? originalForm.coverImageUrl
-                        : `https://localhost:5001/${originalForm.coverImageUrl}`
+                        : `/${originalForm.coverImageUrl}`
                     : ''
             );
             setStatus('Changes discarded');

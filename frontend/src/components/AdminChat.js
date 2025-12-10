@@ -15,7 +15,7 @@ export default function AdminChat() {
     // Fetch users list
     const fetchUsers = async () => {
         try {
-            const res = await fetch('https://localhost:5001/api/chat/users');
+            const res = await fetch('/api/chat/users');
             const data = await res.json();
             setUsers(data);
         } catch (err) {
@@ -26,7 +26,7 @@ export default function AdminChat() {
     // Fetch chat with selected user
     const fetchMessages = async (userEmail) => {
         try {
-            const res = await fetch(`https://localhost:5001/api/chat/admin/${userEmail}`);
+            const res = await fetch(`/api/chat/admin/${userEmail}`);
             const data = await res.json();
             setMessages(data);
         } catch (err) {
@@ -57,7 +57,7 @@ export default function AdminChat() {
         };
 
         try {
-            const res = await fetch('https://localhost:5001/api/chat', {
+            const res = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(msgObj)

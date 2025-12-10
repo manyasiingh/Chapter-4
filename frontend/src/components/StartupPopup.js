@@ -11,7 +11,7 @@ export default function StartupPopup() {
 
     useEffect(() => {
         const fetchPopupSetting = async () => {
-            const res = await fetch('https://localhost:5001/api/PopupSettings');
+            const res = await fetch('/api/PopupSettings');
             const data = await res.json();
             const setting = Array.isArray(data) ? data.find(s => s.isEnabled) : null;
 

@@ -21,7 +21,7 @@ export default function AdminPopupEdit() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`https://localhost:5001/api/PopupSettings/${id}`);
+        const res = await fetch(`/api/PopupSettings/${id}`);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
 
         const text = await res.text();
@@ -47,7 +47,7 @@ export default function AdminPopupEdit() {
 
   const handleSubmit = async () => {
     try {
-      await fetch(`https://localhost:5001/api/PopupSettings/${id}`, {
+      await fetch(`/api/PopupSettings/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)

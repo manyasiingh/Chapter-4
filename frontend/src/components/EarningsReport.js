@@ -8,7 +8,7 @@ export default function EarningsReport() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/admin/earnings-report')
+        fetch('/api/admin/earnings-report')
             .then(res => res.json())
             .then(setReport)
             .catch(err => console.error("Failed to load earnings report:", err));

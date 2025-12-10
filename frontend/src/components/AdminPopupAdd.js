@@ -20,7 +20,7 @@ export default function AdminPopupAdd() {
     };
 
     const handleSubmit = async () => {
-        await fetch('https://localhost:5001/api/PopupSettings', {
+        await fetch('/api/PopupSettings', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form)

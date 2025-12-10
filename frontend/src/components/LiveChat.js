@@ -9,7 +9,7 @@
 
 //     const fetchMessages = async () => {
 //         try {
-//             const res = await fetch(`https://localhost:5001/api/chat/${userEmail}`);
+//             const res = await fetch(`/api/chat/${userEmail}`);
 //             if (res.ok) {
 //                 const data = await res.json();
 //                 setMessages(data);
@@ -37,7 +37,7 @@
 //         };
 
 //         try {
-//             const res = await fetch('https://localhost:5001/api/chat', {
+//             const res = await fetch('/api/chat', {
 //                 method: 'POST',
 //                 headers: { 'Content-Type': 'application/json' },
 //                 body: JSON.stringify(msgObj)
@@ -99,7 +99,7 @@ export default function LiveChat({ userEmail }) {
 
     const fetchMessages = async () => {
         try {
-            const res = await fetch(`https://localhost:5001/api/chat/${userEmail}`);
+            const res = await fetch(`/api/chat/${userEmail}`);
             if (res.ok) {
                 const data = await res.json();
                 setMessages(data);
@@ -136,7 +136,7 @@ export default function LiveChat({ userEmail }) {
         };
 
         try {
-            const res = await fetch('https://localhost:5001/api/chat', {
+            const res = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(msgObj)

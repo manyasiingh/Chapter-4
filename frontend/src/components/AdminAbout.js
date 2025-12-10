@@ -17,7 +17,7 @@ export default function AdminAbout() {
     };
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/aboutcontent')
+        fetch('/api/aboutcontent')
             .then(res => res.json())
             .then(data => {
                 const structured = {};
@@ -34,7 +34,7 @@ export default function AdminAbout() {
 
     const handleSave = async (section) => {
         try {
-            const res = await fetch(`https://localhost:5001/api/aboutcontent/${section}`, {
+            const res = await fetch(`/api/aboutcontent/${section}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ section, content: sections[section] })

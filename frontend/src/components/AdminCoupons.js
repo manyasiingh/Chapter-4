@@ -18,7 +18,7 @@ export default function AdminCoupons() {
     const fetchCoupons = async () => {
         setLoading(true);
         try {
-            const response = await fetch('https://localhost:5001/api/coupons');
+            const response = await fetch('/api/coupons');
             if (!response.ok) throw new Error('Failed to fetch coupons');
             const data = await response.json();
             setCoupons(data);
@@ -31,7 +31,7 @@ export default function AdminCoupons() {
 
     const fetchTopCustomer = async () => {
         try {
-            const response = await fetch('https://localhost:5001/api/coupons/top-customer');
+            const response = await fetch('/api/coupons/top-customer');
             if (!response.ok) return;
             const data = await response.json();
             setTopCustomer(data);
@@ -43,7 +43,7 @@ export default function AdminCoupons() {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this coupon?')) {
             try {
-                const response = await fetch(`https://localhost:5001/api/coupons/${id}`, {
+                const response = await fetch(`/api/coupons/${id}`, {
                     method: 'DELETE',
                 });
                 if (!response.ok) throw new Error('Failed to delete coupon');

@@ -69,7 +69,7 @@ export default function AddCoupon() {
         };
 
         try {
-            const response = await fetch('https://localhost:5001/api/coupons', {
+            const response = await fetch('/api/coupons', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),

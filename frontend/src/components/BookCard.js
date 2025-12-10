@@ -14,7 +14,7 @@ export default function BookCard({ book }) {
   useEffect(() => {
     const fetchWishlistStatus = async () => {
       if (!email) return;
-      const res = await fetch(`https://localhost:5001/api/wishlist/${email}`);
+      const res = await fetch(`/api/wishlist/${email}`);
       if (res.ok) {
         const data = await res.json();
         setIsWishlisted(data.some(item => item.bookId === book.id));
@@ -30,12 +30,12 @@ export default function BookCard({ book }) {
     }
 
     if (isWishlisted) {
-      await fetch(`https://localhost:5001/api/wishlist/${email}/${book.id}`, {
+      await fetch(`/api/wishlist/${email}/${book.id}`, {
         method: 'DELETE'
       });
       setIsWishlisted(false);
     } else {
-      const res = await fetch('https://localhost:5001/api/wishlist', {
+      const res = await fetch('/api/wishlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, bookId: book.id })
@@ -64,7 +64,7 @@ export default function BookCard({ book }) {
           src={
             book.coverImageUrl?.startsWith('http')
               ? book.coverImageUrl
-              : `https://localhost:5001/${book.coverImageUrl}`
+              : `/${book.coverImageUrl}`
           }
           alt={book.title}
           className="book-image"

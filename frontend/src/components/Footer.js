@@ -15,7 +15,7 @@ export default function Footer() {
   useEffect(() => {
     const fetchContactInfo = async () => {
       try {
-        const response = await fetch('https://localhost:5001/api/contactinfo');
+        const response = await fetch('/api/contactinfo');
         if (response.ok) {
           const data = await response.json();
           setContactInfo({

@@ -17,7 +17,7 @@ export default function QuizResults() {
 
     useEffect(() => {
         if (genre && theme && story) {
-            fetch(`https://localhost:5001/api/books/match?genre=${genre}&theme=${theme}&story=${story}`)
+            fetch(`/api/books/match?genre=${genre}&theme=${theme}&story=${story}`)
                 .then(res => {
                     if (!res.ok) throw new Error('Failed to fetch books');
                     return res.json();
@@ -36,7 +36,7 @@ export default function QuizResults() {
         }
 
         try {
-            const res = await fetch(`https://localhost:5001/api/cartitems`, {
+            const res = await fetch(`/api/cartitems`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, bookId, quantity: 1 }),
@@ -77,7 +77,7 @@ export default function QuizResults() {
                                 src={
                                     book.coverImageUrl.startsWith('http')
                                         ? book.coverImageUrl
-                                        : `https://localhost:5001/${book.coverImageUrl}`
+                                        : `/${book.coverImageUrl}`
                                 }
                                 alt={book.title}
                                 className="book-cover"

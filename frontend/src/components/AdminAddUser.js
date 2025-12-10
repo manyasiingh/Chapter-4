@@ -61,7 +61,7 @@ export default function AdminAddUser() {
         setStatus('Creating user...');
 
         try {
-            const res = await fetch(`https://localhost:5001/api/users`, {
+            const res = await fetch(`/api/users`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(user)
@@ -87,7 +87,7 @@ export default function AdminAddUser() {
                 const formData = new FormData();
                 formData.append('file', selectedFile);
 
-                const imageRes = await fetch(`https://localhost:5001/api/users/${userId}/upload-profile-image`, {
+                const imageRes = await fetch(`/api/users/${userId}/upload-profile-image`, {
                     method: 'POST',
                     body: formData
                 });

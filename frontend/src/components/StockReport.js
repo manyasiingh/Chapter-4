@@ -7,7 +7,7 @@ export default function StockReport() {
     const [books, setBooks] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch("https://localhost:5001/api/admin/stock-report")
+        fetch("/api/admin/stock-report")
             .then(res => res.json())
             .then(setBooks)
             .catch(err => console.error("Failed to fetch stock report", err));

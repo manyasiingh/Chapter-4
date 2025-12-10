@@ -13,7 +13,7 @@ export default function AdminReviews() {
     }, []);
 
     const fetchReviews = async () => {
-        const res = await fetch('https://localhost:5001/api/reviews');
+        const res = await fetch('/api/reviews');
         const data = await res.json();
         setReviews(data);
     };
@@ -21,7 +21,7 @@ export default function AdminReviews() {
     const handleDelete = async (id) => {
         if (!window.confirm('Delete this review?')) return;
 
-        const res = await fetch(`https://localhost:5001/api/reviews/${id}`, {
+        const res = await fetch(`/api/reviews/${id}`, {
             method: 'DELETE'
         });
 
@@ -36,7 +36,7 @@ export default function AdminReviews() {
         const reply = replyMap[id];
         if (!reply) return;
 
-        const res = await fetch(`https://localhost:5001/api/reviews/${id}/reply`, {
+        const res = await fetch(`/api/reviews/${id}/reply`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(reply)
@@ -77,7 +77,7 @@ export default function AdminReviews() {
                             <td>
                                 {review.imageUrl && (
                                     <img
-                                        src={`https://localhost:5001/${review.imageUrl}`}
+                                        src={`/${review.imageUrl}`}
                                         alt="Review"
                                         width={70}
                                     />

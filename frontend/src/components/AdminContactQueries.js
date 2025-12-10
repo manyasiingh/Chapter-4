@@ -11,7 +11,7 @@ export default function AdminContactQueries() {
 
     const fetchQueries = async () => {
         try {
-            const res = await fetch('https://localhost:5001/api/contactqueries');
+            const res = await fetch('/api/contactqueries');
             if (!res.ok) throw new Error('Failed to fetch');
             const data = await res.json();
             setQueries(data);
@@ -24,7 +24,7 @@ export default function AdminContactQueries() {
         if (!window.confirm('Are you sure you want to delete this query?')) return;
 
         try {
-            const res = await fetch(`https://localhost:5001/api/contactqueries/${id}`, {
+            const res = await fetch(`/api/contactqueries/${id}`, {
                 method: 'DELETE',
             });
             if (res.ok) {
@@ -49,7 +49,7 @@ export default function AdminContactQueries() {
         }
 
         try {
-            const res = await fetch(`https://localhost:5001/api/contactqueries/${id}/reply`, {
+            const res = await fetch(`/api/contactqueries/${id}/reply`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -144,7 +144,7 @@ export default function AdminContactQueries() {
 
 //     const fetchQueries = async () => {
 //         try {
-//             const res = await fetch('https://localhost:5001/api/contactqueries');
+//             const res = await fetch('/api/contactqueries');
 //             if (!res.ok) throw new Error('Failed to fetch');
 //             const data = await res.json();
 //             setQueries(data);
@@ -157,7 +157,7 @@ export default function AdminContactQueries() {
 //         if (!window.confirm('Are you sure you want to delete this query?')) return;
 
 //         try {
-//             const res = await fetch(`https://localhost:5001/api/contactqueries/${id}`, {
+//             const res = await fetch(`/api/contactqueries/${id}`, {
 //                 method: 'DELETE',
 //             });
 //             if (res.ok) {

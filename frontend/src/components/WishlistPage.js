@@ -8,13 +8,13 @@ export default function WishlistPage() {
     const navigate = useNavigate();
     const [wishlist, setWishlist] = useState([]);
     const removeFromWishlist = async (bookId) => {
-        await fetch(`https://localhost:5001/api/wishlist/${email}/${bookId}`, { method: 'DELETE' });
+        await fetch(`/api/wishlist/${email}/${bookId}`, { method: 'DELETE' });
         setWishlist(prev => prev.filter(item => item.bookId !== bookId));
     };
 
     useEffect(() => {
         const fetchWishlist = async () => {
-            const res = await fetch(`https://localhost:5001/api/wishlist/${email}`);
+            const res = await fetch(`/api/wishlist/${email}`);
             const data = await res.json();
             setWishlist(data);
         };

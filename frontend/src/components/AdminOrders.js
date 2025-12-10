@@ -8,7 +8,7 @@ export default function AdminOrders() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://localhost:5001/api/orders/all')
+        fetch('/api/orders/all')
             .then(res => res.json())
             .then(data => {
                 const statusPriority = {

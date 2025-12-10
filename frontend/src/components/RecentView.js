@@ -8,7 +8,7 @@ export default function RecentlyViewedBooks() {
   useEffect(() => {
     const fetchRecentViews = async () => {
       try {
-        const res = await fetch(`https://localhost:5001/api/recentviews/user/${email}`);
+        const res = await fetch(`/api/recentviews/user/${email}`);
         if (res.ok) {
           const data = await res.json();
           setRecentBooks(data);
