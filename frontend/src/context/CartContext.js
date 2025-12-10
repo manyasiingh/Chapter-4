@@ -11,9 +11,16 @@ export default function CartProvider({ children, userEmail }) {
     refreshCart(userEmail);
   }, [userEmail]);
 
+  // Helper function to get API base URL
+  const getApiUrl = () => {
+    // In production, use relative path (empty string)
+    // In development, it will use proxy from package.json
+    return ''; 
+  };
+
   const refreshCart = async (email) => {
     try {
-      const res = await fetch(`https://localhost:5001/api/cartitems/${email}`);
+      const res = await fetch(`${getApiUrl()}/api/cartitems/${email}`);
       if (!res.ok) throw new Error("Failed to fetch cart");
       const data = await res.json();
       setCartItems(data.map(item => ({
@@ -34,7 +41,7 @@ export default function CartProvider({ children, userEmail }) {
     }
 
     try {
-      const res = await fetch('https://localhost:5001/api/cartitems', {
+      const res = await fetch(`${getApiUrl()}/api/cartitems`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -58,8 +65,10 @@ export default function CartProvider({ children, userEmail }) {
   const removeFromCart = async (bookId) => {
     const email = localStorage.getItem("email");
     try {
-      const res = await fetch(`https://localhost:5001/api/cartitems/${bookId}`, {
+      const res = await fetch(`${getApiUrl()}/api/cartitems/${bookId}`, {
         method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
       });
 
       if (res.ok) {
@@ -76,10 +85,13 @@ export default function CartProvider({ children, userEmail }) {
     if (quantity < 1) return;
     const email = localStorage.getItem("email");
     try {
-      const res = await fetch(`https://localhost:5001/api/cartitems/${bookId}`, {
+      const res = await fetch(`${getApiUrl()}/api/cartitems/${bookId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ quantity }),
+        body: JSON.stringify({ 
+          email: email,
+          quantity: quantity 
+        }),
       });
 
       if (res.ok) {
