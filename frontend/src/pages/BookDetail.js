@@ -64,13 +64,19 @@ export default function BookDetail() {
 
       <h2 className="book-title">{book.title}</h2>
       {book.coverImageUrl && (
-        <img
-          src={
-            book.coverImageUrl.startsWith('http')
-              ? book.coverImageUrl
-              : `/${book.coverImageUrl}`
-          }
-          alt={book.title}
+        <img src={
+    book.coverImageUrl?.startsWith('http')
+      ? book.coverImageUrl
+      : book.coverImageUrl?.startsWith('/')
+        ? book.coverImageUrl
+        : `/images/${book.coverImageUrl || 'default-book.jpg'}`
+  }
+  alt={book.title}
+  className="book-image"
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = '/images/default-book.jpg';
+  }}
         />
       )}
       <p className='details'><strong>Author: </strong>{book.author || 'Unknown'}</p>
